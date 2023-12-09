@@ -1,54 +1,31 @@
-function getPbl(paperNum, pblNum) {
+function getPbl(pNum, qNum) { // paperNumber, questionNumber
 	var output = '';
-	output += scpdata[paperNum - 1].paperTitle
-		+ '\n'
-		+ pblNum
-		+ '. —'
-		+ scpdata[paperNum - 1].pbls[pblNum - 1].stm[0]
-		+ '\n—'
-		+ scpdata[paperNum - 1].pbls[pblNum - 1].stm[1]
-		+ '\n A. '
-		+ scpdata[paperNum - 1].pbls[pblNum - 1].opt[0]
-		+ '\n B. '
-		+ scpdata[paperNum - 1].pbls[pblNum - 1].opt[1]
-		+ '\n C. '
-		+ scpdata[paperNum - 1].pbls[pblNum - 1].opt[2]
-		+ '\n D. '
-		+ scpdata[paperNum - 1].pbls[pblNum - 1].opt[3];
+	output += scpdata[pNum - 1].paperTitle + '\n' + qNum + '. —'
+		+ scpdata[pNum - 1].pbls[qNum - 1].stm[0] + '\n—'
+		+ scpdata[pNum - 1].pbls[qNum - 1].stm[1] + '\n A. '
+		+ scpdata[pNum - 1].pbls[qNum - 1].opt[0] + '\n B. '
+		+ scpdata[pNum - 1].pbls[qNum - 1].opt[1] + '\n C. '
+		+ scpdata[pNum - 1].pbls[qNum - 1].opt[2] + '\n D. '
+		+ scpdata[pNum - 1].pbls[qNum - 1].opt[3];
 	console.log(output)
 };
 
-function getTrans(paperNum, pblNum) {
+function getTrans(pNum, qNum) {
 	var output = '';
-	output += scpdata[paperNum - 1].paperTitle
-		+ '\n'
-		+ pblNum
-		+ '. —'
-		+ scpdata[paperNum - 1].pbls[pblNum - 1].stm[0]
-		+ '\n—'
-		+ scpdata[paperNum - 1].pbls[pblNum - 1].stm[1]
-		+ '\n A. '
-		+ scpdata[paperNum - 1].pbls[pblNum - 1].opt[0]
-		+ '\n B. '
-		+ scpdata[paperNum - 1].pbls[pblNum - 1].opt[1]
-		+ '\n C. '
-		+ scpdata[paperNum - 1].pbls[pblNum - 1].opt[2]
-		+ '\n D. '
-		+ scpdata[paperNum - 1].pbls[pblNum - 1].opt[3]
-		+ '\n\n答案：'
-		+ scpdata[paperNum - 1].pbls[pblNum - 1].asw
-		+ '，翻译：\n——'
-		+ scpdata[paperNum - 1].pbls[pblNum - 1].stm[2]
-		+ '\n——'
-		+ scpdata[paperNum - 1].pbls[pblNum - 1].stm[3]
-		+ '\n A. '
-		+ scpdata[paperNum - 1].pbls[pblNum - 1].opt[4]
-		+ '\n B. '
-		+ scpdata[paperNum - 1].pbls[pblNum - 1].opt[5]
-		+ '\n C. '
-		+ scpdata[paperNum - 1].pbls[pblNum - 1].opt[6]
-		+ '\n D. '
-		+ scpdata[paperNum - 1].pbls[pblNum - 1].opt[7];
+	output += scpdata[pNum - 1].paperTitle + '\n' + qNum + '. —'
+		+ scpdata[pNum - 1].pbls[qNum - 1].stm[0] + '\n—'
+		+ scpdata[pNum - 1].pbls[qNum - 1].stm[1] + '\n A. '
+		+ scpdata[pNum - 1].pbls[qNum - 1].opt[0] + '\n B. '
+		+ scpdata[pNum - 1].pbls[qNum - 1].opt[1] + '\n C. '
+		+ scpdata[pNum - 1].pbls[qNum - 1].opt[2] + '\n D. '
+		+ scpdata[pNum - 1].pbls[qNum - 1].opt[3] + '\n\n答案：'
+		+ scpdata[pNum - 1].pbls[qNum - 1].asw + '\n\n翻译：\n——'
+		+ scpdata[pNum - 1].pbls[qNum - 1].stm[2] + '\n——'
+		+ scpdata[pNum - 1].pbls[qNum - 1].stm[3] + '\n A. '
+		+ scpdata[pNum - 1].pbls[qNum - 1].opt[4] + '\n B. '
+		+ scpdata[pNum - 1].pbls[qNum - 1].opt[5] + '\n C. '
+		+ scpdata[pNum - 1].pbls[qNum - 1].opt[6] + '\n D. '
+		+ scpdata[pNum - 1].pbls[qNum - 1].opt[7];
 	console.log(output)
 };
 
@@ -59,8 +36,8 @@ var scpdata = [
 			{
 				"asw": "D",
 				"stm": [
-					"Let’s take a coffee break.",
-					"________ We’ve been working for hours.",
+					"Let's take a coffee break.",
+					"________ We've been working for hours.",
 					"我们喝杯咖啡，休息一会儿吧。",
 					"我完全同意。我们已经连续工作好几个小时了。"
 				],
@@ -78,7 +55,7 @@ var scpdata = [
 			{
 				"asw": "A",
 				"stm": [
-					"Shall I close the windows now before I leave？",
+					"Shall I close the windows now before I leave?",
 					"________. I'll check it myself later.",
 					null,
 					null
@@ -243,7 +220,7 @@ var scpdata = [
 				"opt": [
 					"No way",
 					"Go ahead",
-					"You’d better not",
+					"You'd better not",
 					"I think so",
 					"没门；表示拒绝",
 					"问吧，干吧，做吧；表示鼓励对方去做刚提到的事",
@@ -357,98 +334,98 @@ var scpdata = [
 		"paperTitle": "模拟卷（四）",
 		"pbls": [
 			{
-				"asw": "",
+				"asw": "D",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"I did badly in my English exam. How unlucky I am!",
+					"________. Cheer up! Everything will be OK.",
+					"我英语考试中表现很差。我真不幸！",
+					"很难过听到那个消息。振作起来！一切都会好的。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"Congratulations",
+					"That's great",
+					"Well done",
+					"Sorry to hear that",
+					"祝贺",
+					"那太棒了",
+					"做得好",
+					"很难过听到那个消息"
 				]
 			},
 			{
-				"asw": "",
+				"asw": "A",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"I am going back to America for Christmas.",
+					"________. And we will miss you.",
+					"我要回美国过圣诞节。",
+					"祝你过得愉快。我们会想念你的。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"Enjoy yourself",
+					"You're welcome",
+					"That's interesting",
+					"The same to you",
+					"过得愉快",
+					"不客气",
+					"那很有趣",
+					"你也一样"
 				]
 			},
 			{
-				"asw": "",
+				"asw": "C",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"I am going to have a job interview tomorrow morning.",
+					"Well, ________",
+					"我明天早上有个工作面试。",
+					"嗯，祝你好运！"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"have a good time!",
+					"I'm happy to hear that.",
+					"good luck!",
+					"congratulations!",
+					"玩得高兴",
+					"我很高兴听你这么说",
+					"祝你好运！",
+					"祝贺你！"
 				]
 			},
 			{
-				"asw": "",
+				"asw": "A",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"Would you mind if I take the seat next to you?",
+					"________. The person who was here has finished his lunch and left.",
+					"你介意我坐在你旁边吗？",
+					"当然不介意。刚才在这儿的那个人吃完午饭就走了。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"Certainly not",
+					"Enjoy yourself",
+					"Don't trouble me",
+					"Yes, please",
+					"当然不",
+					"玩得开心",
+					"别麻烦我",
+					"是的，请"
 				]
 			},
 			{
-				"asw": "",
+				"asw": "B",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"So you gave her your mobile phone?",
+					"________. She said she'd return it to me after she had hers fixed.",
+					"所以你把你的手机送给她了？",
+					"不完全是这样。她说她把她自己的修好后会还给我的。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"My pleasure",
+					"Not exactly",
+					"With pleasure",
+					"No problem",
+					"乐意效劳",
+					"不完全是这样",
+					"愉快地",
+					"没问题"
 				]
 			}
 		]
@@ -457,98 +434,98 @@ var scpdata = [
 		"paperTitle": "模拟卷（五）",
 		"pbls": [
 			{
-				"asw": "",
+				"asw": "C",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"Do you mind if I sit here?",
+					"________ lt's for Ms. Green.",
+					"你介意我坐在这里吗？",
+					"最好不要。这是为格林女士准备的。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"Not at all.",
+					"Of course not.",
+					"You'd better not.",
+					"Sure.",
+					"一点也不",
+					"当然不",
+					"你最好不",
+					"当然"
 				]
 			},
 			{
-				"asw": "",
+				"asw": "B",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"________?",
+					"Yes. Two sandwiches and a cup of coffee, please.",
+					"你准备点餐了吗？",
+					"是的，请来两份三明治和一杯咖啡。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"What do you want",
+					"Are you ready to order",
+					"What's the specialty here",
+					"What would you like to drink",
+					null,
+					null,
+					null,
+					null
 				]
 			},
 			{
-				"asw": "",
+				"asw": "D",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"Long time no see, Tom. ________?",
+					"Pretty good. Everything goes well.",
+					"好久不见，汤姆。最近还好吗？",
+					"相当好。一切顺利。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"What are you doing",
+					"What are you",
+					"What's wrong",
+					"How is it going",
+					"你正在做什么？",
+					"你做什么工作的？",
+					"你怎么了？",
+					"最近还好吗？"
 				]
 			},
 			{
-				"asw": "",
+				"asw": "C",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"Could you do me a favor and take these books to my office?",
+					"Yes, ________.",
+					"你能帮我把这些书拿到我的办公室吗？",
+					"是的，乐意效劳。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"it's nothing",
+					"it's all right",
+					"with pleasure",
+					"my pleasure",
+					null,
+					null,
+					"好的，乐意效劳",
+					"那是我应该做的"
 				]
 			},
 			{
-				"asw": "",
+				"asw": "C",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"How time fies! Since the College Entrance Examinations are approaching, we have to seize every minute.",
+					"________. As the saying goes, time lost cannot be won again.",
+					"时间过得真快啊！高考快到了，我们要抓紧每一分钟。",
+					"没错。俗话说，时间一去不复返。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"Don't mention it",
+					"Forget it",
+					"Exactly",
+					"I beg to differ",
+					"没关系",
+					"不必在意",
+					"一点不错，完全正确",
+					"恕我不能同意"
 				]
 			}
 		]
@@ -557,98 +534,98 @@ var scpdata = [
 		"paperTitle": "模拟卷（六）",
 		"pbls": [
 			{
-				"asw": "",
+				"asw": "D",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"I'm sorry I didn't make it to your party last night.",
+					"________ I know you are busy these days.",
+					"我很抱歉昨晚没去参加你的派对。",
+					"没关系。我知道你最近很忙。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"Don't mention it.",
+					"What's up?",
+					"I got it.",
+					"Never mind.",
+					"别客气",
+					"怎么了？",
+					"我明白了",
+					"没关系"
 				]
 			},
 			{
-				"asw": "",
+				"asw": "D",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"Miss Lin, are you free at the moment? I have to ask you some questions.",
+					"________.",
+					"林小姐，你现在有空吗？我得问你几个问题。",
+					"你问吧。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"It's a pleasure",
+					"Ask please",
+					"Help yourself",
+					"Go ahead",
+					"乐意效劳",
+					"请问",
+					"别客气",
+					"去吧，问吧"
 				]
 			},
 			{
-				"asw": "",
+				"asw": "C",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"Can I take a look at the menu for a few minutes before I decide?",
+					"Of course! ________, sir.",
+					"我可以先看一下菜单再做决定吗?",
+					"当然！先生，请慢慢看。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"Make yourself at home",
+					"Take it easy",
+					"Take your time",
+					"Enjoy yourself",
+					"别拘束",
+					"别紧张",
+					"慢慢来",
+					"玩的愉快"
 				]
 			},
 			{
-				"asw": "",
+				"asw": "B",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"I'm afraid I've got a terrible cold.",
+					"________. Let's go to see a doctor and have a check.",
+					"恐怕我得了重感冒。",
+					"不要着急。我们去看医生检查一下吧。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"Take your time",
+					"Take it easy",
+					"Don't mention it",
+					"Don't bother",
+					"别着急；从容做",
+					"别担心；放轻松",
+					"不用介意",
+					"不用麻烦了；不打扰了"
 				]
 			},
 			{
-				"asw": "",
+				"asw": "D",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"I get at least an hour of physical exercise almost every day.",
+					"Oh great! ________.",
+					"我几乎每天至少有半小时的锻炼。",
+					"哦，太好了。保持下去。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"Good luck",
+					"Cheer up",
+					"Same to you",
+					"Keep it up",
+					"祝好运",
+					"振作起来",
+					"和你一样",
+					"保持下去"
 				]
 			}
 		]
@@ -657,98 +634,98 @@ var scpdata = [
 		"paperTitle": "模拟卷（七）",
 		"pbls": [
 			{
-				"asw": "",
+				"asw": "B",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"Why didn't you come to the party?",
+					"________, but I'd really like some time alone to clear my thoughts.",
+					"你为什么没有来参加聚会？",
+					"我无意冒犯，但是我真的想有一段时间来整理我的想法。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"No wonder",
+					"No offence",
+					"No comment",
+					"No doubt",
+					"难怪",
+					"无意冒犯",
+					"无可奉告",
+					"毫无疑问"
 				]
 			},
 			{
-				"asw": "",
+				"asw": "B",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"Thank you for sharing your Bilibili membership with me.",
+					"________. That's what friends are for.",
+					"感谢你和我分享你的哔哩哔哩会员。",
+					"别客气。这是朋友该做的。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"Not really",
+					"Don't mention it",
+					"It's up to you",
+					"By all means",
+					"不全是这样",
+					"别客气",
+					"你决定吧",
+					"当然可以、一定"
 				]
 			},
 			{
-				"asw": "",
+				"asw": "B",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"Can we finish packing these orders some other time?",
+					"________? They are not urgent.",
+					"我们能不能改天再包装这些订货？",
+					"为什么不呢?要的不是很急。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"What for",
+					"Why not",
+					"So what",
+					"Why bother",
+					"为什么",
+					"为何不",
+					"那又怎样",
+					"何必费心"
 				]
 			},
 			{
-				"asw": "",
+				"asw": "C",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"I'd like to sit at the back of the classroom.",
+					"________. But you'll see the blackboard more clearly in the front.",
+					"我想坐在教室的后面。",
+					"如你所愿。但是你在前面会看黑板更清楚。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"You got me there",
+					"I don't know",
+					"As you wish",
+					"I couldn't agree more",
+					"你难住我了",
+					"我不知道",
+					"如你所愿",
+					"我非常同意"
 				]
 			},
 			{
-				"asw": "",
+				"asw": "D",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"The concert to be given by the famous singer in our city has been cancelled because of his poor health.",
+					"________. I've been looking forward to seeing him.",
+					"那位著名歌手原定在我市举行的音乐会由于身体不好而取消了。",
+					"真遗憾。我一直盼着见到他。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"It doesn't matter",
+					"I can't agree more",
+					"I have no idea",
+					"It's a pity",
+					"没关系",
+					"我完全同意",
+					"我不知道",
+					"真遗憾"
 				]
 			}
 		]
@@ -757,98 +734,98 @@ var scpdata = [
 		"paperTitle": "模拟卷（八）",
 		"pbls": [
 			{
-				"asw": "",
+				"asw": "C",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"Every day there is always so much work to do. I think I'm going to be driven mad. ",
+					"________. It's going to be all right.",
+					"工作总是这么多，我都快疯了。",
+					"保持冷静。一切都会过去的。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"No way",
+					"Go ahead",
+					"Keep cool",
+					"Never mind",
+					"没门",
+					"着手做某事，尽管去做",
+					"保持冷静，有话好好说",
+					"不必担心"
 				]
 			},
 			{
-				"asw": "",
+				"asw": "A",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"This film is really moving!",
+					"________! You've described exactly what I felt about the film.",
+					"这部电影真感人！",
+					"是啊！你说出了我对这部电影的感觉。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"That's it",
+					"Well done",
+					"Cheers",
+					"Nonsense",
+					"就是这样",
+					"干得好",
+					"干杯",
+					"胡说八道"
 				]
 			},
 			{
-				"asw": "",
+				"asw": "A",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"Are you going to the museum, Alice?",
+					"No, I ________ to it already.",
+					"爱丽丝，你要去博物馆吗？",
+					"不，我已经去过了。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"have been",
+					"have gone",
+					"had been",
+					"had gone",
+					"已经去过了（现在完成时态）",
+					"已经去了还没回来（现在完成时态）",
+					"已经去过了（过去完成时态）",
+					"已经去了还没回来（过去完成时态）"
 				]
 			},
 			{
-				"asw": "",
+				"asw": "A",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"I'm sorry for breaking the cup.",
+					"Oh, ________. —I've got plenty.",
+					"对不起，打坏了你的杯子。",
+					"噢，没关系。我还有很多呢。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"forget it",
+					"my pleasure",
+					"help yourself",
+					"pardon me",
+					"得了吧；算了吧；没关系",
+					"不用谢",
+					"随便",
+					"对不起，再说一遍"
 				]
 			},
 			{
-				"asw": "",
+				"asw": "D",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"Would you like to see a movie with me tonight?",
+					"Great! ________.",
+					"今晚你愿意和我一起去看电影吗？",
+					"太好了，我愿意去。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"I'm not free",
+					"We'd better not",
+					"We'll be fine",
+					"I'd love to",
+					"我没空",
+					"我们最好不",
+					"我们很好",
+					"我愿意"
 				]
 			}
 		]
