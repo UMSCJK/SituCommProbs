@@ -1,0 +1,48 @@
+* {
+	user-select: none;
+}
+
+#options div {
+	/* 左右居中 */
+	margin: auto;
+	width: 360px;
+	height: 48px;
+	text-align: center;
+	margin-bottom: 6px;
+	border-radius: 8px;
+	border: 2px solid #e5e5e5;
+	border-bottom: 4px solid #e5e5e5;
+}
+
+#options div:hover {
+	background-color: #f7f7f7;
+}
+
+#options div span.optn {
+	float: left;
+	width: 32px;
+	height: 32px;
+	border-radius: 8px;
+	border: 2px solid #e5e5e5;
+}
+
+#options div span.optn {
+	width: 24px;
+	height: 24px;
+	margin: 10px;
+	display: block;
+	font-size: 14px;
+	line-height: 24px;
+	color: #b8b8b8;
+	font-weight: bold;
+}
+
+#options div span.text {
+	color: #4b4b4b;
+	font-size: 18px;
+	line-height: 48px;
+}
+
+#check {
+	
+}

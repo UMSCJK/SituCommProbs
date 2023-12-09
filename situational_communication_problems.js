@@ -1,7 +1,7 @@
 function getPbl(pNum, qNum) { // paperNumber, questionNumber
 	var output = '';
-	output += scpdata[pNum - 1].paperTitle + '\n' + qNum + '. —'
-		+ scpdata[pNum - 1].pbls[qNum - 1].stm[0] + '\n—'
+	output += scpdata[pNum - 1].paperTitle + '\n' + qNum + '. '
+		+ scpdata[pNum - 1].pbls[qNum - 1].stm[0] + '\n'
 		+ scpdata[pNum - 1].pbls[qNum - 1].stm[1] + '\n A. '
 		+ scpdata[pNum - 1].pbls[qNum - 1].opt[0] + '\n B. '
 		+ scpdata[pNum - 1].pbls[qNum - 1].opt[1] + '\n C. '
@@ -12,15 +12,15 @@ function getPbl(pNum, qNum) { // paperNumber, questionNumber
 
 function getTrans(pNum, qNum) {
 	var output = '';
-	output += scpdata[pNum - 1].paperTitle + '\n' + qNum + '. —'
-		+ scpdata[pNum - 1].pbls[qNum - 1].stm[0] + '\n—'
+	output += scpdata[pNum - 1].paperTitle + '\n' + qNum
+		+ scpdata[pNum - 1].pbls[qNum - 1].stm[0] + '\n'
 		+ scpdata[pNum - 1].pbls[qNum - 1].stm[1] + '\n A. '
 		+ scpdata[pNum - 1].pbls[qNum - 1].opt[0] + '\n B. '
 		+ scpdata[pNum - 1].pbls[qNum - 1].opt[1] + '\n C. '
 		+ scpdata[pNum - 1].pbls[qNum - 1].opt[2] + '\n D. '
 		+ scpdata[pNum - 1].pbls[qNum - 1].opt[3] + '\n\n答案：'
-		+ scpdata[pNum - 1].pbls[qNum - 1].asw + '\n\n翻译：\n——'
-		+ scpdata[pNum - 1].pbls[qNum - 1].stm[2] + '\n——'
+		+ scpdata[pNum - 1].pbls[qNum - 1].asw + '\n\n翻译：\n'
+		+ scpdata[pNum - 1].pbls[qNum - 1].stm[2] + '\n'
 		+ scpdata[pNum - 1].pbls[qNum - 1].stm[3] + '\n A. '
 		+ scpdata[pNum - 1].pbls[qNum - 1].opt[4] + '\n B. '
 		+ scpdata[pNum - 1].pbls[qNum - 1].opt[5] + '\n C. '
@@ -36,10 +36,10 @@ var scpdata = [
 			{
 				"asw": "D",
 				"stm": [
-					"Let's take a coffee break.",
-					"________ We've been working for hours.",
-					"我们喝杯咖啡，休息一会儿吧。",
-					"我完全同意。我们已经连续工作好几个小时了。"
+					"–Let's take a coffee break.",
+					"–________ We've been working for hours.",
+					"——我们喝杯咖啡，休息一会儿吧。",
+					"——我完全同意。我们已经连续工作好几个小时了。"
 				],
 				"opt": [
 					"Why bother?",
@@ -55,8 +55,8 @@ var scpdata = [
 			{
 				"asw": "A",
 				"stm": [
-					"Shall I close the windows now before I leave?",
-					"________. I'll check it myself later.",
+					"–Shall I close the windows now before I leave?",
+					"–________. I'll check it myself later.",
 					null,
 					null
 				],
@@ -74,10 +74,10 @@ var scpdata = [
 			{
 				"asw": "D",
 				"stm": [
-					"I'm afraid you have the wrong number.",
-					"Sorry! ________.",
-					"恐怕你拨错号码了。",
-					"对不起，希望没打扰到你。"
+					"–I'm afraid you have the wrong number.",
+					"–Sorry! ________.",
+					"——恐怕你拨错号码了。",
+					"——对不起，希望没打扰到你。"
 				],
 				"opt": [
 					"See you later",
@@ -93,10 +93,10 @@ var scpdata = [
 			{
 				"asw": "B",
 				"stm": [
-					"I guess you want to play tennis.",
-					"________ That's exactly what I was thinking too.",
-					"我猜你要去打网球。",
-					"你猜对了。那也正是我刚才在想的事情。"
+					"–I guess you want to play tennis.",
+					"–________ That's exactly what I was thinking too.",
+					"——我猜你要去打网球。",
+					"——你猜对了。那也正是我刚才在想的事情。"
 				],
 				"opt": [
 					"I didn't get it.",
@@ -112,8 +112,8 @@ var scpdata = [
 			{
 				"asw": "A",
 				"stm": [
-					"You look so upset, Isabelle. ________?",
-					"I failed to pass the driving test last week.",
+					"–You look so upset, Isabelle. ________?",
+					"–I failed to pass the driving test last week.",
 					null,
 					null
 				],
@@ -136,10 +136,10 @@ var scpdata = [
 			{
 				"asw": "C",
 				"stm": [
-					"I'm dead tired. I can't walk any farther, Jenny.",
-					"________, Tommy. You can do it!",
-					"Jenny，我累死了。我不能再走了。",
-					"加油，Tommy，你可以做到的。"
+					"–I'm dead tired. I can't walk any farther, Jenny.",
+					"–________, Tommy. You can do it!",
+					"——Jenny，我累死了。我不能再走了。",
+					"——加油，Tommy，你可以做到的。"
 				],
 				"opt": [
 					"No problem",
@@ -155,10 +155,10 @@ var scpdata = [
 			{
 				"asw": "C",
 				"stm": [
-					"I'm afraid I cannot pass the driving test.",
-					"________, Helen. Everything will be OK soon.",
-					"我恐怕不能通过驾驶考试。",
-					"别着急，海伦。"
+					"–I'm afraid I cannot pass the driving test.",
+					"–________, Helen. Everything will be OK soon.",
+					"——我恐怕不能通过驾驶考试。",
+					"——别着急，海伦。"
 				],
 				"opt": [
 					"Don't mention it",
@@ -174,10 +174,10 @@ var scpdata = [
 			{
 				"asw": "B",
 				"stm": [
-					"The movie starts at 8:30, and we can have a quick bite before we go.",
-					"________. See you at 8:10.",
-					"电影8:30开始，在我们去之前我们可以快速地吃点东西。",
-					"听上去是个好主意。八点十分见。"
+					"–The movie starts at 8:30, and we can have a quick bite before we go.",
+					"–________. See you at 8:10.",
+					"——电影8:30开始，在我们去之前我们可以快速地吃点东西。",
+					"——听上去是个好主意。八点十分见。"
 				],
 				"opt": [
 					"So long",
@@ -193,10 +193,10 @@ var scpdata = [
 			{
 				"asw": "C",
 				"stm": [
-					"Could you lend me some books?",
-					"________. I have a lot of books here.",
-					"你能借给我一些书吗？",
-					"当然。我这里有很多书。"
+					"–Could you lend me some books?",
+					"–________. I have a lot of books here.",
+					"——你能借给我一些书吗？",
+					"——当然。我这里有很多书。"
 				],
 				"opt": [
 					"Excuse me",
@@ -212,10 +212,10 @@ var scpdata = [
 			{
 				"asw": "B",
 				"stm": [
-					"Do you mind if I turn on the TV?",
-					"________. Let's watch the sports news now.",
-					"你介意我把电视打开吗？",
-					"开吧。我们现在看体育新闻吧。"
+					"–Do you mind if I turn on the TV?",
+					"–________. Let's watch the sports news now.",
+					"——你介意我把电视打开吗？",
+					"——开吧。我们现在看体育新闻吧。"
 				],
 				"opt": [
 					"No way",
@@ -236,10 +236,10 @@ var scpdata = [
 			{
 				"asw": "C",
 				"stm": [
-					"Could you spare me a few minutes, Mr. Green? I still have some questions.",
-					"________.",
-					"格林先生，你能抽出几分钟时间给我吗？我还有一些问题。",
-					"问吧。"
+					"–Could you spare me a few minutes, Mr. Green? I still have some questions.",
+					"–________.",
+					"——格林先生，你能抽出几分钟时间给我吗？我还有一些问题。",
+					"——问吧。"
 				],
 				"opt": [
 					"Good job",
@@ -255,10 +255,10 @@ var scpdata = [
 			{
 				"asw": "C",
 				"stm": [
-					"Good morning, sir. ________?",
-					"Yes. I booked a room last week. My name is Ron Johnson.",
-					"早上好，先生。我能帮你吗？",
-					"好的。我上周订了一个房间。我叫罗恩·约翰逊。"
+					"–Good morning, sir. ________?",
+					"–Yes. I booked a room last week. My name is Ron Johnson.",
+					"——早上好，先生。我能帮你吗？",
+					"——好的。我上周订了一个房间。我叫罗恩·约翰逊。"
 				],
 				"opt": [
 					"Are you all right",
@@ -274,10 +274,10 @@ var scpdata = [
 			{
 				"asw": "A",
 				"stm": [
-					"________?",
-					"My watch says eight.",
-					"现在几点了？",
-					"我的表显示8点。"
+					"–________?",
+					"–My watch says eight.",
+					"——现在几点了？",
+					"——我的表显示8点。"
 				],
 				"opt": [
 					"What time is it",
@@ -293,10 +293,10 @@ var scpdata = [
 			{
 				"asw": "D",
 				"stm": [
-					"That's a nice shirt!",
-					"________. I just got it yesterday.",
-					"这件衬衫真漂亮！",
-					"谢谢。我昨天刚买的。"
+					"–That's a nice shirt!",
+					"–________. I just got it yesterday.",
+					"——这件衬衫真漂亮！",
+					"——谢谢。我昨天刚买的。"
 				],
 				"opt": [
 					"That's all right",
@@ -312,10 +312,10 @@ var scpdata = [
 			{
 				"asw": "D",
 				"stm": [
-					"Please show me your health code, either on WeChat or Alipay.",
-					"________. Here it is.",
-					"请出示您的健康码，微信或者支付宝都可以。",
-					"没问题。这里。"
+					"–Please show me your health code, either on WeChat or Alipay.",
+					"–________. Here it is.",
+					"——请出示您的健康码，微信或者支付宝都可以。",
+					"——没问题。这里。"
 				],
 				"opt": [
 					"It's nothing",
@@ -336,10 +336,10 @@ var scpdata = [
 			{
 				"asw": "D",
 				"stm": [
-					"I did badly in my English exam. How unlucky I am!",
-					"________. Cheer up! Everything will be OK.",
-					"我英语考试中表现很差。我真不幸！",
-					"很难过听到那个消息。振作起来！一切都会好的。"
+					"–I did badly in my English exam. How unlucky I am!",
+					"–________. Cheer up! Everything will be OK.",
+					"——我英语考试中表现很差。我真不幸！",
+					"——很难过听到那个消息。振作起来！一切都会好的。"
 				],
 				"opt": [
 					"Congratulations",
@@ -355,10 +355,10 @@ var scpdata = [
 			{
 				"asw": "A",
 				"stm": [
-					"I am going back to America for Christmas.",
-					"________. And we will miss you.",
-					"我要回美国过圣诞节。",
-					"祝你过得愉快。我们会想念你的。"
+					"–I am going back to America for Christmas.",
+					"–________. And we will miss you.",
+					"——我要回美国过圣诞节。",
+					"——祝你过得愉快。我们会想念你的。"
 				],
 				"opt": [
 					"Enjoy yourself",
@@ -374,10 +374,10 @@ var scpdata = [
 			{
 				"asw": "C",
 				"stm": [
-					"I am going to have a job interview tomorrow morning.",
-					"Well, ________",
-					"我明天早上有个工作面试。",
-					"嗯，祝你好运！"
+					"–I am going to have a job interview tomorrow morning.",
+					"–Well, ________",
+					"——我明天早上有个工作面试。",
+					"——嗯，祝你好运！"
 				],
 				"opt": [
 					"have a good time!",
@@ -393,10 +393,10 @@ var scpdata = [
 			{
 				"asw": "A",
 				"stm": [
-					"Would you mind if I take the seat next to you?",
-					"________. The person who was here has finished his lunch and left.",
-					"你介意我坐在你旁边吗？",
-					"当然不介意。刚才在这儿的那个人吃完午饭就走了。"
+					"–Would you mind if I take the seat next to you?",
+					"–________. The person who was here has finished his lunch and left.",
+					"——你介意我坐在你旁边吗？",
+					"——当然不介意。刚才在这儿的那个人吃完午饭就走了。"
 				],
 				"opt": [
 					"Certainly not",
@@ -412,10 +412,10 @@ var scpdata = [
 			{
 				"asw": "B",
 				"stm": [
-					"So you gave her your mobile phone?",
-					"________. She said she'd return it to me after she had hers fixed.",
-					"所以你把你的手机送给她了？",
-					"不完全是这样。她说她把她自己的修好后会还给我的。"
+					"–So you gave her your mobile phone?",
+					"–________. She said she'd return it to me after she had hers fixed.",
+					"——所以你把你的手机送给她了？",
+					"——不完全是这样。她说她把她自己的修好后会还给我的。"
 				],
 				"opt": [
 					"My pleasure",
@@ -436,10 +436,10 @@ var scpdata = [
 			{
 				"asw": "C",
 				"stm": [
-					"Do you mind if I sit here?",
-					"________ lt's for Ms. Green.",
-					"你介意我坐在这里吗？",
-					"最好不要。这是为格林女士准备的。"
+					"–Do you mind if I sit here?",
+					"–________ lt's for Ms. Green.",
+					"——你介意我坐在这里吗？",
+					"——最好不要。这是为格林女士准备的。"
 				],
 				"opt": [
 					"Not at all.",
@@ -455,10 +455,10 @@ var scpdata = [
 			{
 				"asw": "B",
 				"stm": [
-					"________?",
-					"Yes. Two sandwiches and a cup of coffee, please.",
-					"你准备点餐了吗？",
-					"是的，请来两份三明治和一杯咖啡。"
+					"–________?",
+					"–Yes. Two sandwiches and a cup of coffee, please.",
+					"——你准备点餐了吗？",
+					"——是的，请来两份三明治和一杯咖啡。"
 				],
 				"opt": [
 					"What do you want",
@@ -474,10 +474,10 @@ var scpdata = [
 			{
 				"asw": "D",
 				"stm": [
-					"Long time no see, Tom. ________?",
-					"Pretty good. Everything goes well.",
-					"好久不见，汤姆。最近还好吗？",
-					"相当好。一切顺利。"
+					"–Long time no see, Tom. ________?",
+					"–Pretty good. Everything goes well.",
+					"——好久不见，汤姆。最近还好吗？",
+					"——相当好。一切顺利。"
 				],
 				"opt": [
 					"What are you doing",
@@ -493,10 +493,10 @@ var scpdata = [
 			{
 				"asw": "C",
 				"stm": [
-					"Could you do me a favor and take these books to my office?",
-					"Yes, ________.",
-					"你能帮我把这些书拿到我的办公室吗？",
-					"是的，乐意效劳。"
+					"–Could you do me a favor and take these books to my office?",
+					"–Yes, ________.",
+					"——你能帮我把这些书拿到我的办公室吗？",
+					"——是的，乐意效劳。"
 				],
 				"opt": [
 					"it's nothing",
@@ -512,10 +512,10 @@ var scpdata = [
 			{
 				"asw": "C",
 				"stm": [
-					"How time fies! Since the College Entrance Examinations are approaching, we have to seize every minute.",
-					"________. As the saying goes, time lost cannot be won again.",
-					"时间过得真快啊！高考快到了，我们要抓紧每一分钟。",
-					"没错。俗话说，时间一去不复返。"
+					"–How time fies! Since the College Entrance Examinations are approaching, we have to seize every minute.",
+					"–________. As the saying goes, time lost cannot be won again.",
+					"——时间过得真快啊！高考快到了，我们要抓紧每一分钟。",
+					"——没错。俗话说，时间一去不复返。"
 				],
 				"opt": [
 					"Don't mention it",
@@ -536,10 +536,10 @@ var scpdata = [
 			{
 				"asw": "D",
 				"stm": [
-					"I'm sorry I didn't make it to your party last night.",
-					"________ I know you are busy these days.",
-					"我很抱歉昨晚没去参加你的派对。",
-					"没关系。我知道你最近很忙。"
+					"–I'm sorry I didn't make it to your party last night.",
+					"–________ I know you are busy these days.",
+					"——我很抱歉昨晚没去参加你的派对。",
+					"——没关系。我知道你最近很忙。"
 				],
 				"opt": [
 					"Don't mention it.",
@@ -555,10 +555,10 @@ var scpdata = [
 			{
 				"asw": "D",
 				"stm": [
-					"Miss Lin, are you free at the moment? I have to ask you some questions.",
-					"________.",
-					"林小姐，你现在有空吗？我得问你几个问题。",
-					"你问吧。"
+					"–Miss Lin, are you free at the moment? I have to ask you some questions.",
+					"–________.",
+					"——林小姐，你现在有空吗？我得问你几个问题。",
+					"——你问吧。"
 				],
 				"opt": [
 					"It's a pleasure",
@@ -574,10 +574,10 @@ var scpdata = [
 			{
 				"asw": "C",
 				"stm": [
-					"Can I take a look at the menu for a few minutes before I decide?",
-					"Of course! ________, sir.",
-					"我可以先看一下菜单再做决定吗?",
-					"当然！先生，请慢慢看。"
+					"–Can I take a look at the menu for a few minutes before I decide?",
+					"–Of course! ________, sir.",
+					"——我可以先看一下菜单再做决定吗?",
+					"——当然！先生，请慢慢看。"
 				],
 				"opt": [
 					"Make yourself at home",
@@ -593,10 +593,10 @@ var scpdata = [
 			{
 				"asw": "B",
 				"stm": [
-					"I'm afraid I've got a terrible cold.",
-					"________. Let's go to see a doctor and have a check.",
-					"恐怕我得了重感冒。",
-					"不要着急。我们去看医生检查一下吧。"
+					"–I'm afraid I've got a terrible cold.",
+					"–________. Let's go to see a doctor and have a check.",
+					"——恐怕我得了重感冒。",
+					"——不要着急。我们去看医生检查一下吧。"
 				],
 				"opt": [
 					"Take your time",
@@ -612,10 +612,10 @@ var scpdata = [
 			{
 				"asw": "D",
 				"stm": [
-					"I get at least an hour of physical exercise almost every day.",
-					"Oh great! ________.",
-					"我几乎每天至少有半小时的锻炼。",
-					"哦，太好了。保持下去。"
+					"–I get at least an hour of physical exercise almost every day.",
+					"–Oh great! ________.",
+					"——我几乎每天至少有半小时的锻炼。",
+					"——哦，太好了。保持下去。"
 				],
 				"opt": [
 					"Good luck",
@@ -636,10 +636,10 @@ var scpdata = [
 			{
 				"asw": "B",
 				"stm": [
-					"Why didn't you come to the party?",
-					"________, but I'd really like some time alone to clear my thoughts.",
-					"你为什么没有来参加聚会？",
-					"我无意冒犯，但是我真的想有一段时间来整理我的想法。"
+					"–Why didn't you come to the party?",
+					"–________, but I'd really like some time alone to clear my thoughts.",
+					"——你为什么没有来参加聚会？",
+					"——我无意冒犯，但是我真的想有一段时间来整理我的想法。"
 				],
 				"opt": [
 					"No wonder",
@@ -655,10 +655,10 @@ var scpdata = [
 			{
 				"asw": "B",
 				"stm": [
-					"Thank you for sharing your Bilibili membership with me.",
-					"________. That's what friends are for.",
-					"感谢你和我分享你的哔哩哔哩会员。",
-					"别客气。这是朋友该做的。"
+					"–Thank you for sharing your Bilibili membership with me.",
+					"–________. That's what friends are for.",
+					"——感谢你和我分享你的哔哩哔哩会员。",
+					"——别客气。这是朋友该做的。"
 				],
 				"opt": [
 					"Not really",
@@ -674,10 +674,10 @@ var scpdata = [
 			{
 				"asw": "B",
 				"stm": [
-					"Can we finish packing these orders some other time?",
-					"________? They are not urgent.",
-					"我们能不能改天再包装这些订货？",
-					"为什么不呢?要的不是很急。"
+					"–Can we finish packing these orders some other time?",
+					"–________? They are not urgent.",
+					"——我们能不能改天再包装这些订货？",
+					"——为什么不呢?要的不是很急。"
 				],
 				"opt": [
 					"What for",
@@ -693,10 +693,10 @@ var scpdata = [
 			{
 				"asw": "C",
 				"stm": [
-					"I'd like to sit at the back of the classroom.",
-					"________. But you'll see the blackboard more clearly in the front.",
-					"我想坐在教室的后面。",
-					"如你所愿。但是你在前面会看黑板更清楚。"
+					"–I'd like to sit at the back of the classroom.",
+					"–________. But you'll see the blackboard more clearly in the front.",
+					"——我想坐在教室的后面。",
+					"——如你所愿。但是你在前面会看黑板更清楚。"
 				],
 				"opt": [
 					"You got me there",
@@ -712,10 +712,10 @@ var scpdata = [
 			{
 				"asw": "D",
 				"stm": [
-					"The concert to be given by the famous singer in our city has been cancelled because of his poor health.",
-					"________. I've been looking forward to seeing him.",
-					"那位著名歌手原定在我市举行的音乐会由于身体不好而取消了。",
-					"真遗憾。我一直盼着见到他。"
+					"–The concert to be given by the famous singer in our city has been cancelled because of his poor health.",
+					"–________. I've been looking forward to seeing him.",
+					"——那位著名歌手原定在我市举行的音乐会由于身体不好而取消了。",
+					"——真遗憾。我一直盼着见到他。"
 				],
 				"opt": [
 					"It doesn't matter",
@@ -736,10 +736,10 @@ var scpdata = [
 			{
 				"asw": "C",
 				"stm": [
-					"Every day there is always so much work to do. I think I'm going to be driven mad. ",
-					"________. It's going to be all right.",
-					"工作总是这么多，我都快疯了。",
-					"保持冷静。一切都会过去的。"
+					"–Every day there is always so much work to do. I think I'm going to be driven mad. ",
+					"–________. It's going to be all right.",
+					"——工作总是这么多，我都快疯了。",
+					"——保持冷静。一切都会过去的。"
 				],
 				"opt": [
 					"No way",
@@ -755,10 +755,10 @@ var scpdata = [
 			{
 				"asw": "A",
 				"stm": [
-					"This film is really moving!",
-					"________! You've described exactly what I felt about the film.",
-					"这部电影真感人！",
-					"是啊！你说出了我对这部电影的感觉。"
+					"–This film is really moving!",
+					"–________! You've described exactly what I felt about the film.",
+					"——这部电影真感人！",
+					"——是啊！你说出了我对这部电影的感觉。"
 				],
 				"opt": [
 					"That's it",
@@ -774,10 +774,10 @@ var scpdata = [
 			{
 				"asw": "A",
 				"stm": [
-					"Are you going to the museum, Alice?",
-					"No, I ________ to it already.",
-					"爱丽丝，你要去博物馆吗？",
-					"不，我已经去过了。"
+					"–Are you going to the museum, Alice?",
+					"–No, I ________ to it already.",
+					"——爱丽丝，你要去博物馆吗？",
+					"——不，我已经去过了。"
 				],
 				"opt": [
 					"have been",
@@ -793,10 +793,10 @@ var scpdata = [
 			{
 				"asw": "A",
 				"stm": [
-					"I'm sorry for breaking the cup.",
-					"Oh, ________. —I've got plenty.",
-					"对不起，打坏了你的杯子。",
-					"噢，没关系。我还有很多呢。"
+					"–I'm sorry for breaking the cup.",
+					"–Oh, ________. —I've got plenty.",
+					"——对不起，打坏了你的杯子。",
+					"——噢，没关系。我还有很多呢。"
 				],
 				"opt": [
 					"forget it",
@@ -812,10 +812,10 @@ var scpdata = [
 			{
 				"asw": "D",
 				"stm": [
-					"Would you like to see a movie with me tonight?",
-					"Great! ________.",
-					"今晚你愿意和我一起去看电影吗？",
-					"太好了，我愿意去。"
+					"–Would you like to see a movie with me tonight?",
+					"–Great! ________.",
+					"——今晚你愿意和我一起去看电影吗？",
+					"——太好了，我愿意去。"
 				],
 				"opt": [
 					"I'm not free",
@@ -836,10 +836,10 @@ var scpdata = [
 			{
 				"asw": "",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"–",
+					"–",
+					"——",
+					"——"
 				],
 				"opt": [
 					"",
@@ -855,10 +855,10 @@ var scpdata = [
 			{
 				"asw": "",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"–",
+					"–",
+					"——",
+					"——"
 				],
 				"opt": [
 					"",
@@ -874,10 +874,10 @@ var scpdata = [
 			{
 				"asw": "",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"–",
+					"–",
+					"——",
+					"——"
 				],
 				"opt": [
 					"",
@@ -893,10 +893,10 @@ var scpdata = [
 			{
 				"asw": "",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"–",
+					"–",
+					"——",
+					"——"
 				],
 				"opt": [
 					"",
@@ -912,10 +912,10 @@ var scpdata = [
 			{
 				"asw": "",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"–",
+					"–",
+					"——",
+					"——"
 				],
 				"opt": [
 					"",
@@ -936,10 +936,10 @@ var scpdata = [
 			{
 				"asw": "",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"–",
+					"–",
+					"——",
+					"——"
 				],
 				"opt": [
 					"",
@@ -955,10 +955,10 @@ var scpdata = [
 			{
 				"asw": "",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"–",
+					"–",
+					"——",
+					"——"
 				],
 				"opt": [
 					"",
@@ -974,10 +974,10 @@ var scpdata = [
 			{
 				"asw": "",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"–",
+					"–",
+					"——",
+					"——"
 				],
 				"opt": [
 					"",
@@ -993,10 +993,10 @@ var scpdata = [
 			{
 				"asw": "",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"–",
+					"–",
+					"——",
+					"——"
 				],
 				"opt": [
 					"",
@@ -1012,10 +1012,10 @@ var scpdata = [
 			{
 				"asw": "",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"–",
+					"–",
+					"——",
+					"——"
 				],
 				"opt": [
 					"",
@@ -1036,10 +1036,10 @@ var scpdata = [
 			{
 				"asw": "",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"–",
+					"–",
+					"——",
+					"——"
 				],
 				"opt": [
 					"",
@@ -1055,10 +1055,10 @@ var scpdata = [
 			{
 				"asw": "",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"–",
+					"–",
+					"——",
+					"——"
 				],
 				"opt": [
 					"",
@@ -1074,10 +1074,10 @@ var scpdata = [
 			{
 				"asw": "",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"–",
+					"–",
+					"——",
+					"——"
 				],
 				"opt": [
 					"",
@@ -1093,10 +1093,10 @@ var scpdata = [
 			{
 				"asw": "",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"–",
+					"–",
+					"——",
+					"——"
 				],
 				"opt": [
 					"",
@@ -1112,10 +1112,10 @@ var scpdata = [
 			{
 				"asw": "",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"–",
+					"–",
+					"——",
+					"——"
 				],
 				"opt": [
 					"",
@@ -1136,10 +1136,10 @@ var scpdata = [
 			{
 				"asw": "",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"–",
+					"–",
+					"——",
+					"——"
 				],
 				"opt": [
 					"",
@@ -1155,10 +1155,10 @@ var scpdata = [
 			{
 				"asw": "",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"–",
+					"–",
+					"——",
+					"——"
 				],
 				"opt": [
 					"",
@@ -1174,10 +1174,10 @@ var scpdata = [
 			{
 				"asw": "",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"–",
+					"–",
+					"——",
+					"——"
 				],
 				"opt": [
 					"",
@@ -1193,10 +1193,10 @@ var scpdata = [
 			{
 				"asw": "",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"–",
+					"–",
+					"——",
+					"——"
 				],
 				"opt": [
 					"",
@@ -1212,10 +1212,10 @@ var scpdata = [
 			{
 				"asw": "",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"–",
+					"–",
+					"——",
+					"——"
 				],
 				"opt": [
 					"",
@@ -1236,10 +1236,10 @@ var scpdata = [
 			{
 				"asw": "",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"–",
+					"–",
+					"——",
+					"——"
 				],
 				"opt": [
 					"",
@@ -1255,10 +1255,10 @@ var scpdata = [
 			{
 				"asw": "",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"–",
+					"–",
+					"——",
+					"——"
 				],
 				"opt": [
 					"",
@@ -1274,10 +1274,10 @@ var scpdata = [
 			{
 				"asw": "",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"–",
+					"–",
+					"——",
+					"——"
 				],
 				"opt": [
 					"",
@@ -1293,10 +1293,10 @@ var scpdata = [
 			{
 				"asw": "",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"–",
+					"–",
+					"——",
+					"——"
 				],
 				"opt": [
 					"",
@@ -1312,10 +1312,10 @@ var scpdata = [
 			{
 				"asw": "",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"–",
+					"–",
+					"——",
+					"——"
 				],
 				"opt": [
 					"",
