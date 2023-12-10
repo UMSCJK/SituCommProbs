@@ -1,4 +1,4 @@
-window.onload = function () {
+onload = function () {
 	// 创建监听器
 	document.getElementById("optnA").addEventListener("click", function () { sel(0) });
 	document.getElementById("optnB").addEventListener("click", function () { sel(1) });
@@ -6,7 +6,7 @@ window.onload = function () {
 	document.getElementById("optnD").addEventListener("click", function () { sel(3) });
 	document.getElementById("optnE").addEventListener("click", function () { sel(4) });
 	// 初始化变量（这里还没写）
-
+	var userSelect = '';
 
 	// 定义clsRpls (Class Replace) 函数，以便在sel函数中用较少的代码量实现给HTML元素增减class的功能。此为专用函数，无法用于其他位置
 	function clsAdd(idO, idP, idQ, idR) {
@@ -28,29 +28,50 @@ window.onload = function () {
 	function sel(opt) {
 		if (opt == 0) {
 			// 为id为optnB、optnC、optnD、optnE的元素移除seled类名、添加unseled类名；给id为optnA的元素添加seled类名
-			clsAdd(B, C, D, E);
+			clsAdd("optnB", "optnC", "optnD", "optnE");
+			// 为id为optnA的元素添加seled类名、移除unseled类名
 			document.getElementById("optnA").classList.add("seled");
+			document.getElementById("optnA").classList.remove("unseled");
+			// 用户当前选项全局变量改为'A'
+			userSelect = 'A';
 			// console.log('选择了A');
 		} else if (opt == 1) {
 			// 为id为optnA、optnC、optnD、optnE的元素移除seled类名、添加unseled类名；给id为optnB的元素添加seled类名
-			clsAdd(A, C, D, E);
+			clsAdd("optnA", "optnC", "optnD", "optnE");
+			// 为id为optnB的元素添加seled类名、移除unseled类名
 			document.getElementById("optnB").classList.add("seled");
+			document.getElementById("optnB").classList.remove("unseled");
+			// 用户当前选项全局变量改为'B'
+			userSelect = 'B';
 			// console.log('选择了B');
 		} else if (opt == 2) {
 			// 为id为optnA、optnB、optnD、optnE的元素移除seled类名、添加unseled类名；给id为optnC的元素添加seled类名
-			clsAdd(A, B, D, E);
+			clsAdd("optnA", "optnB", "optnD", "optnE");
+			// 为id为optnC的元素添加seled类名、移除unseled类名
 			document.getElementById("optnC").classList.add("seled");
+			document.getElementById("optnC").classList.remove("unseled");
+			// 用户当前选项全局变量改为'C'
+			userSelect = 'C';
 			// console.log('选择了C');
 		} else if (opt == 3) {
 			// 为id为optnA、optnB、optnC、optnE的元素移除seled类名、添加unseled类名；给id为optnD的元素添加seled类名
-			clsAdd(A, B, C, E);
+			clsAdd("optnA", "optnB", "optnC", "optnE");
+			// 为id为optnD的元素添加seled类名、移除unseled类名
 			document.getElementById("optnD").classList.add("seled");
+			document.getElementById("optnD").classList.remove("unseled");
+			// 用户当前选项全局变量改为'D'
+			userSelect = 'D';
 			// console.log('选择了D');
 		} else if (opt == 4) {
 			// 为id为optnA、optnB、optnC、optnD的元素移除seled类名、添加unseled类名；给id为optnE的元素添加seled类名
-			clsAdd(A, B, C, D);
+			clsAdd("optnA", "optnB", "optnC", "optnD");
+			// 为id为optnE的元素添加seled类名、移除unseled类名
 			document.getElementById("optnE").classList.add("seled");
+			document.getElementById("optnE").classList.remove("unseled");
+			// 用户当前选项全局变量改为'E'
+			userSelect = 'E';
 			// console.log('选择了IDK');
 		}
+		// console.log(userSelect);
 	}
 }

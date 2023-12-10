@@ -1,12 +1,56 @@
 * {
 	user-select: none;
+	font-family: Arial, Helvetica, sans-serif;
 }
+
+body {
+	margin: 32px;
+	border: 1px solid #4b4b4b;
+	padding: 32px;
+	text-align: center;
+}
+
+div.header {
+	height: 40px;
+	position: sticky;
+	/* border-bottom: 2px solid #e5e5e5; */
+	background-color: #FFFFFF;
+}
+
+div.footer {
+	text-align: right;
+}
+
+#question {
+	text-align: left;
+	color: #4b4b4b;
+}
+
+#prog {
+	width: 80%;
+	height: 12px;
+	background-color: #58cc02;
+	border-radius: 6px; /* 添加这一行 */
+}
+
+progress::-webkit-progress-bar {
+	border-radius: 6px;
+	background-color: #e5e5e5;
+}
+
+progress::-webkit-progress-value {
+	background-color: #58cc02;
+	border-radius: 6px;
+}
+
+
+
+
 
 #options {
 	width: 100%;
 	padding: 16px 0;
-	border-top: 2px solid #e5e5e5;
-	border-bottom: 2px solid #e5e5e5;
+	/* border-top: 2px solid #e5e5e5; */
 }
 
 #options div {
@@ -54,15 +98,13 @@
 }
 
 #check {
-	float: right;
 	width: 120px;
 	border: none;
 	height: 48px;
-	margin: 32px;
 	cursor: pointer;
 	font-size: 16px;
 	color: #FFFFFF;
-	line-height: 48px;
+	line-height: 46px;
 	font-weight: bold;
 	border-radius: 14px;
 	background-color: #58cc02;
