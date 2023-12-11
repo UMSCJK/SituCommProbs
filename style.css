@@ -4,9 +4,9 @@
 }
 
 body {
-	margin: 32px;
+	margin: 0;
 	/* border: 1px solid #4b4b4b; */
-	padding: 32px;
+	padding: 32px 16px 16px 16px;
 }
 
 div.header {
@@ -19,15 +19,14 @@ div.footer {
 }
 
 #question {
-	font-size: 28px;
+	font-size: 24px;
 	color: #4b4b4b;
 	text-align: left;
 }
 
-
 #prog-container {
 	width: 80%;
-	height: 12px;
+	height: 16px;
 	margin: 0 auto;
 	border-radius: 6px;
 	background-color: #e5e5e5;
@@ -35,7 +34,11 @@ div.footer {
 
 #prog-bar {
 	width: 20%;
-	height: 12px;
+	height: 16px;
+	font-size: 14px;
+	line-height: 16px;
+	text-align: center;
+	color: #FFFFFF;
 	border-radius: 6px;
 	background-color: #58cc02;
 }
@@ -101,6 +104,10 @@ div.footer {
 	border-radius: 14px;
 	background-color: #58cc02;
 	border-bottom: 4px solid #68b631;
+	/* 固定位置 */
+	right: 16px;
+	bottom: 16px;
+	position: fixed;
 }
 
 #continue:hover {
@@ -114,13 +121,13 @@ div.footer {
 }
 
 .seled {
-	background-color: #ddf4ff;
 	border: 2px solid #84d8ff;
+	background-color: #ddf4ff;
 	border-bottom: 4px solid #84d8ff;
 }
 
 .seled:hover {
-	background-color: #ddf4ff;
 	border: 2px solid #84d8ff;
+	background-color: #ddf4ff;
 	border-bottom: 4px solid #84d8ff;
 }

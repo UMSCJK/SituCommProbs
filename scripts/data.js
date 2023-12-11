@@ -1134,98 +1134,98 @@ var scpdata = [
 		"paperTitle": "模拟卷（十二）",
 		"pbls": [
 			{
-				"asw": "",
+				"asw": "B",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"–Ok,I'll fix your computer right now.",
+					"–Oh, take your time. ________.",
+					"——好的，我马上就给你修电脑。",
+					"——哦,慢慢来。我不着急。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"I can't stand it",
+					"I'm in no hurry",
+					"That's a great idea",
+					"It's not my cup of tea",
+					"我受不了了",
+					"我不着急",
+					"是个好主意",
+					"我对此事不感兴趣"
 				]
 			},
 			{
-				"asw": "",
+				"asw": "B",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"–It is said that J. K Rolling is coming to our school. Are you coming to her speech?",
+					"–________. I can't wait.",
+					"——听说 J. K Rolling 要来我们学校了。你来听她的演讲吗？",
+					"——当然，我迫不及待了。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"It's a deal",
+					"You bet",
+					"It is up to you",
+					"Of course not",
+					"一言为定",
+					"当然",
+					"取决于你",
+					"当然不"
 				]
 			},
 			{
-				"asw": "",
+				"asw": "B",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"–I really don't know when we can get over all the troubles.",
+					"–________! Our troubles will soon be over.",
+					"——我真不知道我们什么时候才能克服所有的困难。",
+					"——振作起来！我们的困难很快就会过去的。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"Forget it",
+					"Cheer up",
+					"Neither do I",
+					"What a pity",
+					"算了吧",
+					"振作起来",
+					"我也不",
+					"真可惜"
 				]
 			},
 			{
-				"asw": "",
+				"asw": "D",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"–What shall we do tonight then?",
+					"–________ whatever you want.",
+					"——我们今晚干什么？",
+					"——你决定,你想干什么都行。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"Help yourself.",
+					"No problem.",
+					"It's a deal.",
+					"It's up to you.",
+					"随意。",
+					"没问题。",
+					"就这样定了。",
+					"由你定。"
 				]
 			},
 			{
-				"asw": "",
+				"asw": "A",
 				"stm": [
-					"",
-					"",
-					"",
-					""
+					"–How long are you staying?",
+					"–I don't know. ________.",
+					"——“你要待多久？”",
+					"——“不知道，看情况吧。”"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"It depends.",
+					"That's OK.",
+					"Never mind.",
+					"It doesn't matter.",
+					"看情况而定",
+					"好的",
+					"没关系",
+					"没关系"
 				]
 			}
 		]
