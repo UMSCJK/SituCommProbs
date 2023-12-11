@@ -1,4 +1,4 @@
-function getPbl(pNum, qNum) { // paperNumber, questionNumber
+function consoleGetPbl(pNum, qNum) { // paperNumber, questionNumber
 	var output = '';
 	output += scpdata[pNum - 1].paperTitle + '\n' + qNum + '. '
 		+ scpdata[pNum - 1].pbls[qNum - 1].stm[0] + '\n'
@@ -10,7 +10,7 @@ function getPbl(pNum, qNum) { // paperNumber, questionNumber
 	console.log(output)
 };
 
-function getTrans(pNum, qNum) {
+function consoleGetTrans(pNum, qNum) {
 	var output = '';
 	output += scpdata[pNum - 1].paperTitle + '\n' + qNum
 		+ scpdata[pNum - 1].pbls[qNum - 1].stm[0] + '\n'

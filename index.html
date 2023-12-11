@@ -5,14 +5,17 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<script src="situational_communication_problems.js"></script>
-	<script src="style.js"></script>
 	<link rel="stylesheet" href="style.css">
+	<script src="style.js"></script>
+	<script src="script.js"></script>
+	<script src="situational_communication_problems.js"></script>
 </head>
 
 <body>
 	<div class="header">
-		<progress id="prog" value="2" max="5"></progress>
+		<div id="prog-container">
+			<div id="prog-bar"></div>
+		</div>
 	</div>
 
 	<h1 id="question">–Let's take a coffee break.<br />–________ We've been working for hours.</h1>
@@ -40,7 +43,7 @@
 	</div>
 
 	<div class="footer">
-		<button id="check">CONTINUE</button>
+		<button id="continue">CONTINUE</button>
 	</div>
 
 </body>

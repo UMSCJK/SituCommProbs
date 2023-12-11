@@ -5,15 +5,12 @@
 
 body {
 	margin: 32px;
-	border: 1px solid #4b4b4b;
+	/* border: 1px solid #4b4b4b; */
 	padding: 32px;
-	text-align: center;
 }
 
 div.header {
 	height: 40px;
-	position: sticky;
-	/* border-bottom: 2px solid #e5e5e5; */
 	background-color: #FFFFFF;
 }
 
@@ -22,35 +19,30 @@ div.footer {
 }
 
 #question {
-	text-align: left;
+	font-size: 28px;
 	color: #4b4b4b;
+	text-align: left;
 }
 
-#prog {
+
+#prog-container {
 	width: 80%;
 	height: 12px;
-	background-color: #58cc02;
-	border-radius: 6px; /* 添加这一行 */
-}
-
-progress::-webkit-progress-bar {
+	margin: 0 auto;
 	border-radius: 6px;
 	background-color: #e5e5e5;
 }
 
-progress::-webkit-progress-value {
-	background-color: #58cc02;
+#prog-bar {
+	width: 20%;
+	height: 12px;
 	border-radius: 6px;
+	background-color: #58cc02;
 }
-
-
-
-
 
 #options {
 	width: 100%;
 	padding: 16px 0;
-	/* border-top: 2px solid #e5e5e5; */
 }
 
 #options div {
@@ -97,7 +89,7 @@ progress::-webkit-progress-value {
 	line-height: 48px;
 }
 
-#check {
+#continue {
 	width: 120px;
 	border: none;
 	height: 48px;
@@ -111,12 +103,12 @@ progress::-webkit-progress-value {
 	border-bottom: 4px solid #68b631;
 }
 
-#check:hover {
+#continue:hover {
 	background-color: #61e002;
 	border-bottom: 4px solid #72c836;
 }
 
-#check:active {
+#continue:active {
 	border: none;
 	transform: translateY(1px);
 }
