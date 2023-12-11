@@ -46,10 +46,10 @@ var scpdata = [
 					"What for?",
 					"You got me there.",
 					"You said it.",
-					"何必麻烦",
-					"为什么",
-					"你难住我了",
-					"你说对了；我完全同意"
+					"何必麻烦？",
+					"为什么？",
+					"你难住我了。",
+					"你说对了；我完全同意。"
 				]
 			},
 			{
@@ -103,10 +103,10 @@ var scpdata = [
 					"You read my mind.",
 					"You never know.",
 					"It's up to you.",
-					"我不明白",
-					"由你来决定",
-					"你永远不会知道",
-					"你猜透了我的想法"
+					"我不明白。",
+					"由你来决定。",
+					"你永远不会知道。",
+					"你猜透了我的想法。"
 				]
 			},
 			{
@@ -122,10 +122,10 @@ var scpdata = [
 					"What's for",
 					"What are you up to",
 					"So what",
-					"出什么事了？",
-					"为什么？",
-					"你在忙什么？",
-					"那又怎么样？"
+					"出什么事了",
+					"为什么",
+					"你在忙什么",
+					"那又怎么样"
 				]
 			}
 		]
@@ -384,8 +384,8 @@ var scpdata = [
 					"I'm happy to hear that.",
 					"good luck!",
 					"congratulations!",
-					"玩得高兴",
-					"我很高兴听你这么说",
+					"玩得高兴！",
+					"我很高兴听你这么说。",
 					"祝你好运！",
 					"祝贺你！"
 				]
@@ -446,10 +446,10 @@ var scpdata = [
 					"Of course not.",
 					"You'd better not.",
 					"Sure.",
-					"一点也不",
-					"当然不",
-					"你最好不",
-					"当然"
+					"一点也不。",
+					"当然不。",
+					"你最好不。",
+					"当然。"
 				]
 			},
 			{
@@ -484,10 +484,10 @@ var scpdata = [
 					"What are you",
 					"What's wrong",
 					"How is it going",
-					"你正在做什么？",
-					"你做什么工作的？",
-					"你怎么了？",
-					"最近还好吗？"
+					"你正在做什么",
+					"你做什么工作的",
+					"你怎么了",
+					"最近还好吗"
 				]
 			},
 			{
@@ -546,10 +546,10 @@ var scpdata = [
 					"What's up?",
 					"I got it.",
 					"Never mind.",
-					"别客气",
+					"别客气。",
 					"怎么了？",
-					"我明白了",
-					"没关系"
+					"我明白了。",
+					"没关系。"
 				]
 			},
 			{
@@ -834,98 +834,98 @@ var scpdata = [
 		"paperTitle": "模拟卷（九）",
 		"pbls": [
 			{
-				"asw": "",
+				"asw": "B",
 				"stm": [
-					"–",
-					"–",
-					"——",
-					"——"
+					"–We had a very interesting chat.",
+					"–________? About what?",
+					"——“我们进行了一次非常有趣的谈话。”",
+					"——“真的吗？关于什么？”"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"So what",
+					"Really",
+					"Pardon",
+					"What for",
+					"那又如何",
+					"真的吗",
+					"能再重复一遍吗",
+					"为了什么？"
 				]
 			},
 			{
-				"asw": "",
+				"asw": "B",
 				"stm": [
-					"–",
-					"–",
-					"——",
-					"——"
+					"–I'm going to Venice next week.",
+					"–________. Carnival will be held then. Have fun!",
+					"——我下周去威尼斯。",
+					"——你真走运。那时会举行狂欢节。祝你玩的愉快!"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"You're crazy",
+					"You're lucky",
+					"You'd better not",
+					"You never know",
+					"你疯了",
+					"你真幸运",
+					"你最好不要",
+					"你永远不会懂"
 				]
 			},
 			{
-				"asw": "",
+				"asw": "D",
 				"stm": [
-					"–",
-					"–",
-					"——",
-					"——"
+					"\"All hope was not lost\" means ________.",
+					null,
+					"“没有失去所有的希望”意味着有些希望失去了，有些没有。",
+					null
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"All of the hope was lost",
+					"No hope was lost",
+					"None of the hope was lost",
+					"Some hope was lost, some not",
+					null,
+					null,
+					null,
+					"有些希望失去了，有些没有"
 				]
 			},
 			{
-				"asw": "",
+				"asw": "B",
 				"stm": [
-					"–",
-					"–",
-					"——",
-					"——"
+					"–I think I'd better stay at home and finish the paper.",
+					"–Come on! ________. Everybody is going.",
+					"——我认为我最好待在家完成论文。",
+					"——得了吧，别扫兴，每个人都去。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"It's a piece of cake",
+					"Don't be a wet blanket",
+					"You have green fingers",
+					"I'm all ears",
+					"小菜一碟",
+					"别扫兴",
+					"你是园艺高手",
+					"我洗耳恭听"
 				]
 			},
 			{
-				"asw": "",
+				"asw": "A",
 				"stm": [
-					"–",
-					"–",
-					"——",
-					"——"
+					"–Have you paid? What's my share of the bill?",
+					"–________. It wasn't very much.",
+					"——你付账了吗? 我该分摊多少？",
+					"——别放在心上。（我付的）不多。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"Don't worry about it",
+					"It's my share",
+					"None of your business",
+					"It's up to you",
+					null,
+					"我该付一份",
+					"不关你的事",
+					"由你负责"
 				]
 			}
 		]
@@ -934,98 +934,98 @@ var scpdata = [
 		"paperTitle": "模拟卷（十）",
 		"pbls": [
 			{
-				"asw": "",
+				"asw": "C",
 				"stm": [
-					"–",
-					"–",
-					"——",
-					"——"
+					"–Could you lend me some books?",
+					"–________. I have a lot of books here.",
+					"——你能借给我一些书吗？",
+					"——当然。我这里有很多书。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"Excuse me",
+					"Sorry",
+					"Sure",
+					"No way",
+					"对不起，打扰一下",
+					"抱歉",
+					"当然，的确",
+					"决不，没门"
 				]
 			},
 			{
-				"asw": "",
+				"asw": "B",
 				"stm": [
-					"–",
-					"–",
-					"——",
-					"——"
+					"–Tell me about your stay in London. Did you enjoy it?",
+					"–Yes, ________.",
+					"——告诉我你在伦敦的情况。你喜欢吗？",
+					"——是的，很愉快。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"it was boring",
+					"it was pleasant",
+					"it was terrible",
+					"it was expensive",
+					"它是令人厌烦的",
+					"它是令人愉快的",
+					"它是令人可怕的",
+					"它是昂贵的"
 				]
 			},
 			{
-				"asw": "",
+				"asw": "A",
 				"stm": [
-					"–",
-					"–",
-					"——",
-					"——"
+					"–________, sir?",
+					"–A glass of milk, please.",
+					"——先生，你想要什么？",
+					"——一杯牛奶。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"What would you like",
+					"What is it over there",
+					"What day is it today",
+					"What's the matter with you",
+					"你想要什么",
+					"那边是什么",
+					"今天星期几",
+					"你怎么了"
 				]
 			},
 			{
-				"asw": "",
+				"asw": "C",
 				"stm": [
-					"–",
-					"–",
-					"——",
-					"——"
+					"–My wife and I are going to Paris.",
+					"–________. ",
+					"——我妻子和我将去巴黎。",
+					"——祝你们旅途愉快。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"Never mind",
+					"No problem",
+					"Have a good trip",
+					"It's my pleasure",
+					"没有关系",
+					"没问题",
+					"祝你们旅途愉快",
+					"别客气"
 				]
 			},
 			{
-				"asw": "",
+				"asw": "D",
 				"stm": [
-					"–",
-					"–",
-					"——",
-					"——"
+					"–Would you like to see a movie with me tonight?",
+					"–Great! ________.",
+					"——今晚你愿意和我一起去看电影吗？",
+					"——太好了，我愿意去。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"I'm not free",
+					"We'd better not",
+					"We'll be fine",
+					"I'd love to",
+					"我没空",
+					"我们最好不",
+					"我们很好",
+					"我愿意"
 				]
 			}
 		]
@@ -1034,98 +1034,98 @@ var scpdata = [
 		"paperTitle": "模拟卷（十一）",
 		"pbls": [
 			{
-				"asw": "",
+				"asw": "B",
 				"stm": [
-					"–",
-					"–",
-					"——",
-					"——"
+					"–I've decided to take part in the race, but I'm afraid I may fail to reach the finishing line.",
+					"–________! You never know until you try.",
+					"——我已经决定参加比赛了，但是我害怕我可能不能到达终点线。",
+					"——去努力争取！你尝试了才会知道。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"Do as you like",
+					"Go for it",
+					"Enjoy yourself",
+					"Good luck",
+					"随你便",
+					"去争取",
+					"玩得愉快",
+					"祝好运"
 				]
 			},
 			{
-				"asw": "",
+				"asw": "B",
 				"stm": [
-					"–",
-					"–",
-					"——",
-					"——"
+					"–We haven't done very well, have we?",
+					"–________. At least we tried.",
+					"——我们做得不太好，是吗? ",
+					"——没关系。至少我们努力过。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"I'm fine",
+					"Never mind",
+					"You're welcome",
+					"The same to you",
+					"我很好",
+					"没关系",
+					"不客气",
+					"你也一样"
 				]
 			},
 			{
-				"asw": "",
+				"asw": "B",
 				"stm": [
-					"–",
-					"–",
-					"——",
-					"——"
+					"–I've decided to give up my job.",
+					"–________ It's really a good job and you are always happy with it.",
+					"——我决定放弃我的工作了。",
+					"——你说真的吗？那是一份好工作，你一直很满意。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"No problem.",
+					"Are you serious?",
+					"Cool!",
+					"That's so easy.",
+					"没问题。",
+					"你说真的吗? ",
+					"酷! ",
+					"太容易了。"
 				]
 			},
 			{
-				"asw": "",
+				"asw": "A",
 				"stm": [
-					"–",
-					"–",
-					"——",
-					"——"
+					"–Lucy you look pale today. ________?",
+					"–Thank you. I'm afraid I'm a little tired.",
+					"——露西，你今天脸色苍白。怎么了?",
+					"——谢谢。恐怕我只是有点累了。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"What's up",
+					"So what",
+					"Are you sure",
+					"What's your opinion",
+					"怎么了",
+					"那又怎样",
+					"你确定吗",
+					"你怎么说"
 				]
 			},
 			{
-				"asw": "",
+				"asw": "A",
 				"stm": [
-					"–",
-					"–",
-					"——",
-					"——"
+					"–I can't remember those grammar rules!",
+					"–________. Practice more.",
+					"——我不能够记住这些语法规则。",
+					"——你不是一个人，多加练习。"
 				],
 				"opt": [
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					"",
-					""
+					"You are not alone",
+					"It's hard to say",
+					"I'm afraid not",
+					"It's up to you",
+					"你不是一个人",
+					"这很难说",
+					"恐怕不是这样的",
+					"这取决于你"
 				]
 			}
 		]
@@ -1136,10 +1136,10 @@ var scpdata = [
 			{
 				"asw": "",
 				"stm": [
-					"–",
-					"–",
-					"——",
-					"——"
+					"",
+					"",
+					"",
+					""
 				],
 				"opt": [
 					"",
@@ -1155,10 +1155,10 @@ var scpdata = [
 			{
 				"asw": "",
 				"stm": [
-					"–",
-					"–",
-					"——",
-					"——"
+					"",
+					"",
+					"",
+					""
 				],
 				"opt": [
 					"",
@@ -1174,10 +1174,10 @@ var scpdata = [
 			{
 				"asw": "",
 				"stm": [
-					"–",
-					"–",
-					"——",
-					"——"
+					"",
+					"",
+					"",
+					""
 				],
 				"opt": [
 					"",
@@ -1193,10 +1193,10 @@ var scpdata = [
 			{
 				"asw": "",
 				"stm": [
-					"–",
-					"–",
-					"——",
-					"——"
+					"",
+					"",
+					"",
+					""
 				],
 				"opt": [
 					"",
@@ -1212,10 +1212,10 @@ var scpdata = [
 			{
 				"asw": "",
 				"stm": [
-					"–",
-					"–",
-					"——",
-					"——"
+					"",
+					"",
+					"",
+					""
 				],
 				"opt": [
 					"",
@@ -1236,10 +1236,10 @@ var scpdata = [
 			{
 				"asw": "",
 				"stm": [
-					"–",
-					"–",
-					"——",
-					"——"
+					"",
+					"",
+					"",
+					""
 				],
 				"opt": [
 					"",
@@ -1255,10 +1255,10 @@ var scpdata = [
 			{
 				"asw": "",
 				"stm": [
-					"–",
-					"–",
-					"——",
-					"——"
+					"",
+					"",
+					"",
+					""
 				],
 				"opt": [
 					"",
@@ -1274,10 +1274,10 @@ var scpdata = [
 			{
 				"asw": "",
 				"stm": [
-					"–",
-					"–",
-					"——",
-					"——"
+					"",
+					"",
+					"",
+					""
 				],
 				"opt": [
 					"",
@@ -1293,10 +1293,10 @@ var scpdata = [
 			{
 				"asw": "",
 				"stm": [
-					"–",
-					"–",
-					"——",
-					"——"
+					"",
+					"",
+					"",
+					""
 				],
 				"opt": [
 					"",
@@ -1312,10 +1312,10 @@ var scpdata = [
 			{
 				"asw": "",
 				"stm": [
-					"–",
-					"–",
-					"——",
-					"——"
+					"",
+					"",
+					"",
+					""
 				],
 				"opt": [
 					"",

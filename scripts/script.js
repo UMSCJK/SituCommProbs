@@ -1,5 +1,5 @@
-// 初始变量部分，目前包括：题数、空题组
-var queNum = 10, queList = [];
+// 初始变量部分，目前包括：题数、空题组、当前题目、当前题目答案
+var queNum = 10, queList = [], currentQueNum = 0, cuttentAsw = '';
 
 // 随机生成题组
 for (var i = 0; i < 10; i++) {
