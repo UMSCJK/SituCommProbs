@@ -5,9 +5,10 @@ var queNum = 10, queList = [], currentQueNum = 0, cuttentAsw = '';
 for (var i = 0; i < 10; i++) {
 	// 定义临时数组
 	var tempQue = [];
-	// 随机卷号题号
+	// 随机卷号题号加每题答案
 	var paperNum = Math.floor(Math.random() * 13);
 	var queNum = Math.floor(Math.random() * 5);
+	var currentQueAns = 
 	// 卷号题号推到临时数组
 	tempQue.push(paperNum, queNum);
 	// 临时数组推到全局题组
@@ -15,16 +16,16 @@ for (var i = 0; i < 10; i++) {
 };
 /* 结果：生成一坨JSON，大致如此：
 queList = [
-	[卷号, 题号]
-	[卷号, 题号]
-	[卷号, 题号]
-	[卷号, 题号]
-	[卷号, 题号]
-	[卷号, 题号]
-	[卷号, 题号]
-	[卷号, 题号]
-	[卷号, 题号]
-	[卷号, 题号]
+	[卷号, 题号, '答案']
+	[卷号, 题号, '答案']
+	[卷号, 题号, '答案']
+	[卷号, 题号, '答案']
+	[卷号, 题号, '答案']
+	[卷号, 题号, '答案']
+	[卷号, 题号, '答案']
+	[卷号, 题号, '答案']
+	[卷号, 题号, '答案']
+	[卷号, 题号, '答案']
 ]
 */
 
@@ -32,5 +33,6 @@ queList = [
 document.getElementById("continue").addEventListener("click", function () { ctnfn() });
 // 定义继续函数 (continue function)，用于跳转至下一题
 function ctnfn() {
-	console.log('ctnfn');
+
+	currentQueNum += 1;
 };
