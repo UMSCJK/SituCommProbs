@@ -1,4 +1,4 @@
-onload = function () {
+window.onload = function () {
 	// 创建监听器
 	document.getElementById("optnA").addEventListener("click", function () { sel(0) });
 	document.getElementById("optnB").addEventListener("click", function () { sel(1) });
@@ -6,7 +6,7 @@ onload = function () {
 	document.getElementById("optnD").addEventListener("click", function () { sel(3) });
 	document.getElementById("optnE").addEventListener("click", function () { sel(4) });
 	// 初始化变量（这里还没写）
-	var userSelect = '';
+	var userSelect = new String;
 
 	// 定义clsRpls (Class Replace) 函数，以便在sel函数中用较少的代码量实现给HTML元素增减class的功能。此为专用函数，无法用于其他位置
 	function clsAdd(idO, idP, idQ, idR) {
@@ -52,6 +52,6 @@ onload = function () {
 			document.getElementById("optnE").classList.remove("unseled"); // 为id为optnE的元素移除unseled类名
 			userSelect = 'E'; // 用户当前选项全局变量改为'E'
 		};
-		// console.log(userSelect);
+		console.log(userSelect);
 	}
 }
