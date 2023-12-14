@@ -6,7 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>10 Questions Challenge</title>
 	<link rel="stylesheet" href="style.css">
-	<script src="../challenge/script.js"></script>
 	<script src="../scripts/data.js"></script>
 </head>
 
@@ -100,7 +99,7 @@
 			};
 			// 原script.js
 			// 初始变量部分，目前包括：空题组、当前题目、当前题目答案、错题列表、答题状态
-			queList = [], currentQueNum = 1, wrongQues = [], waiting = false;
+			queList = [], currentQueNum = 1, wrongQues = [], waiting = false, userAnswer = [];
 			// 随机生成题组
 			for (var i = 0; i < 10; i++) {
 				// 定义临时数组
@@ -128,32 +127,46 @@
 				// document.getElementById("prog-bar").style.width = "0";
 				// document.getElementById("prog-bar").innerHTML = "";
 				// 出题
-				document.getElementById("question").innerHTML = '<span class="emsp">&emsp;</span>' + data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[0] + '<br /><span class="emsp">&emsp;</span>' + data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[1];
+				document.getElementById("question").innerHTML = '<span class="emsp">&emsp;</span>'
+					+ data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[0]
+					+ '<br /><span class="emsp">&emsp;</span>'
+					+ data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[1];
 				document.getElementById("textA").innerHTML = data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[2];
 				document.getElementById("textB").innerHTML = data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[3];
 				document.getElementById("textC").innerHTML = data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[4];
 				document.getElementById("textD").innerHTML = data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[5];
+				console.log('currentQueNum: ' + currentQueNum);
 			};
 			setQue();
 			// 为继续按钮添加监听器
 			document.getElementById("continue").addEventListener("click", function () { ctnfn() });
 			// 定义继续函数 (continue function)，用于跳转至下一题
 			function ctnfn() {
-				currentQueNum += 1;
-				alert('currentQueNum (下一题题号): ' + currentQueNum + '\n用户选择: ' + userSelect);
-				document.getElementById("prog-bar").style.width = (currentQueNum - 1) + '0%';
-				document.getElementById("prog-bar").innerHTML = (currentQueNum - 1) + '0%';
-				document.getElementById("optnA").classList.remove("seled");
-				document.getElementById("optnB").classList.remove("seled");
-				document.getElementById("optnC").classList.remove("seled");
-				document.getElementById("optnD").classList.remove("seled");
-				document.getElementById("optnE").classList.remove("seled");
-				document.getElementById("optnA").classList.add("unseled");
-				document.getElementById("optnB").classList.add("unseled");
-				document.getElementById("optnC").classList.add("unseled");
-				document.getElementById("optnD").classList.add("unseled");
-				document.getElementById("optnE").classList.add("unseled");
-				setQue(); // 刷新题目
+				if (userSelect = '') {
+					alert('选一下啊，不会就选E');
+				} else {
+					currentQueNum += 1;
+					alert('currentQueNum (下一题题号): ' + currentQueNum + '\n用户选择: ' + userSelect);
+					document.getElementById("prog-bar").style.width = (currentQueNum - 1) + '0%';
+					document.getElementById("prog-bar").innerHTML = (currentQueNum - 1) + '0%';
+					document.getElementById("optnA").classList.remove("seled");
+					document.getElementById("optnB").classList.remove("seled");
+					document.getElementById("optnC").classList.remove("seled");
+					document.getElementById("optnD").classList.remove("seled");
+					document.getElementById("optnE").classList.remove("seled");
+					document.getElementById("optnA").classList.add("unseled");
+					document.getElementById("optnB").classList.add("unseled");
+					document.getElementById("optnC").classList.add("unseled");
+					document.getElementById("optnD").classList.add("unseled");
+					document.getElementById("optnE").classList.add("unseled");
+					// 存储用户选择为数组，判断对错
+					userAnswer.push(userSelect);
+					userSelect = '';
+					console.log(userAnswer);
+					setQue(); // 刷新题目
+				}
+
+
 			};
 			// TODO：回答对错判断；最后显示错题列表
 			if (currentQueNum == 11) {
@@ -161,13 +174,10 @@
 			};
 			// 定义info函数显示错题列表
 			function info() {
-				// 隐藏所有元素
-				document.getElementById("header").remove;
-				document.getElementById("question").remove;
-				document.getElementById("continue").remove;
-
-
-
+				// 删除所有元素
+				for (var i = 0; i < 3; i++) {
+					document.body.firstElementChild.remove()
+				}
 			};
 		}
 	</script>
