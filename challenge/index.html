@@ -11,9 +11,9 @@
 </head>
 
 <body>
-	<div class="header">
+	<div id="header">
 		<div id="prog-container">
-			<div id="prog-bar">0/10</div>
+			<div id="prog-bar"></div>
 		</div>
 	</div>
 	<h1 id="question">–This is the first line of the quesion stem.<br />–And this is the ________ line.</h1>
@@ -125,24 +125,24 @@
 			function setQue() {
 				// 初始化答题界面
 				// 进度条
-				document.getElementById("prog-bar").style.width = "0";
-				document.getElementById("prog-bar").innerHTML = "";
+				// document.getElementById("prog-bar").style.width = "0";
+				// document.getElementById("prog-bar").innerHTML = "";
 				// 出题
-				document.getElementById("question").innerHTML = '&emsp;' + data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[0] + '<br />&emsp;' + data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[1];
+				document.getElementById("question").innerHTML = '<span class="emsp">&emsp;</span>' + data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[0] + '<br /><span class="emsp">&emsp;</span>' + data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[1];
 				document.getElementById("textA").innerHTML = data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[2];
 				document.getElementById("textB").innerHTML = data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[3];
 				document.getElementById("textC").innerHTML = data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[4];
 				document.getElementById("textD").innerHTML = data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[5];
-			}
+			};
 			setQue();
 			// 为继续按钮添加监听器
 			document.getElementById("continue").addEventListener("click", function () { ctnfn() });
 			// 定义继续函数 (continue function)，用于跳转至下一题
 			function ctnfn() {
 				currentQueNum += 1;
-				alert('currentQueNum: ' + currentQueNum);
-				document.getElementById("prog-bar").style.width = currentQueNum + '0%';
-				document.getElementById("prog-bar").innerHTML = currentQueNum + '0%';
+				alert('currentQueNum (下一题题号): ' + currentQueNum + '\n用户选择: ' + userSelect);
+				document.getElementById("prog-bar").style.width = (currentQueNum - 1) + '0%';
+				document.getElementById("prog-bar").innerHTML = (currentQueNum - 1) + '0%';
 				document.getElementById("optnA").classList.remove("seled");
 				document.getElementById("optnB").classList.remove("seled");
 				document.getElementById("optnC").classList.remove("seled");
@@ -153,8 +153,21 @@
 				document.getElementById("optnC").classList.add("unseled");
 				document.getElementById("optnD").classList.add("unseled");
 				document.getElementById("optnE").classList.add("unseled");
-				setQue();
-				// TODO：解决进度条；回答对错判断；最后显示错题列表
+				setQue(); // 刷新题目
+			};
+			// TODO：回答对错判断；最后显示错题列表
+			if (currentQueNum == 11) {
+				info();
+			};
+			// 定义info函数显示错题列表
+			function info() {
+				// 隐藏所有元素
+				document.getElementById("header").remove;
+				document.getElementById("question").remove;
+				document.getElementById("continue").remove;
+
+
+
 			};
 		}
 	</script>
