@@ -22,7 +22,7 @@ div#header {
 }
 
 #prog-container {
-	width: 80%;
+	width: 90%;
 	height: 16px;
 	margin: 0 auto;
 	border-radius: 8px;
@@ -115,6 +115,12 @@ div#header {
 #continue:active {
 	border: none;
 	transform: translateY(1px);
+}
+
+#continue:disabled {
+	color: #afafaf;
+	background-color: #e5e5e5;
+	border: none;
 }
 
 .seled {

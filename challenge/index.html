@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>10 Questions Challenge</title>
+	<link rel="shortcut icon" href="../vscode.ico" sizes="128x128" />
 	<link rel="stylesheet" href="style.css">
 	<script src="../scripts/data.js"></script>
 </head>
@@ -38,143 +39,171 @@
 			<span id="textE" class="text">(I don't know)</span>
 		</div>
 	</div>
-	<button id="continue">CONTINUE</button>
+	<button id="continue" disabled>CONTINUE</button>
 	<script>
 		// 原style.js
-		window.onload = function () {
-			// 创建监听器
-			document.getElementById("optnA").addEventListener("click", function () { sel(0) });
-			document.getElementById("optnB").addEventListener("click", function () { sel(1) });
-			document.getElementById("optnC").addEventListener("click", function () { sel(2) });
-			document.getElementById("optnD").addEventListener("click", function () { sel(3) });
-			document.getElementById("optnE").addEventListener("click", function () { sel(4) });
-			// 初始化变量
-			var userSelect = '';
+		// 创建监听器
+		document.getElementById("optnA").addEventListener("click", function () { sel(0) });
+		document.getElementById("optnB").addEventListener("click", function () { sel(1) });
+		document.getElementById("optnC").addEventListener("click", function () { sel(2) });
+		document.getElementById("optnD").addEventListener("click", function () { sel(3) });
+		document.getElementById("optnE").addEventListener("click", function () { sel(4) });
+		// 初始化变量
+		var userSelect = '';
+		// 定义clsRpls (Class Replace) 函数，以便在sel函数中用较少的代码量实现给HTML元素增减class的功能。此为专用函数，无法用于其他位置
+		function clsAdd(idO, idP, idQ, idR) {
+			var eleO = document.getElementById(idO);
+			var eleP = document.getElementById(idP);
+			var eleQ = document.getElementById(idQ);
+			var eleR = document.getElementById(idR);
+			eleO.classList.remove("seled");
+			eleP.classList.remove("seled");
+			eleQ.classList.remove("seled");
+			eleR.classList.remove("seled");
+			eleO.classList.add("unseled");
+			eleP.classList.add("unseled");
+			eleQ.classList.add("unseled");
+			eleR.classList.add("unseled");
+		};
+		// 定义单选函数
+		function sel(opt) {
+			if (opt == 0) {
+				clsAdd("optnB", "optnC", "optnD", "optnE"); // 为id为optnB、optnC、optnD、optnE的元素移除seled类名、添加unseled类名；给id为optnA的元素添加seled类名
+				document.getElementById("optnA").classList.add("seled"); // 为id为optnA的元素添加seled类名
+				document.getElementById("optnA").classList.remove("unseled"); // 为id为optnA的元素移除unseled类名
+				userSelect = 'A'; // 用户当前选项全局变量改为'A'
+			} else if (opt == 1) {
+				clsAdd("optnA", "optnC", "optnD", "optnE"); // 为id为optnA、optnC、optnD、optnE的元素移除seled类名、添加unseled类名；给id为optnB的元素添加seled类名
+				document.getElementById("optnB").classList.add("seled"); // 为id为optnB的元素添加seled类名
+				document.getElementById("optnB").classList.remove("unseled"); // 为id为optnB的元素移除unseled类名
+				userSelect = 'B'; // 用户当前选项全局变量改为'B'
+			} else if (opt == 2) {
+				clsAdd("optnA", "optnB", "optnD", "optnE"); // 为id为optnA、optnB、optnD、optnE的元素移除seled类名、添加unseled类名；给id为optnC的元素添加seled类名
+				document.getElementById("optnC").classList.add("seled"); // 为id为optnC的元素添加seled类名
+				document.getElementById("optnC").classList.remove("unseled"); // 为id为optnC的元素移除unseled类名
+				userSelect = 'C'; // 用户当前选项全局变量改为'C'
+			} else if (opt == 3) {
+				clsAdd("optnA", "optnB", "optnC", "optnE"); // 为id为optnA、optnB、optnC、optnE的元素移除seled类名、添加unseled类名；给id为optnD的元素添加seled类名
+				document.getElementById("optnD").classList.add("seled"); // 为id为optnD的元素添加seled类名
+				document.getElementById("optnD").classList.remove("unseled"); // 为id为optnD的元素移除unseled类名
+				userSelect = 'D'; // 用户当前选项全局变量改为'D'
+			} else if (opt == 4) {
+				clsAdd("optnA", "optnB", "optnC", "optnD"); // 为id为optnA、optnB、optnC、optnD的元素移除seled类名、添加unseled类名；给id为optnE的元素添加seled类名
+				document.getElementById("optnE").classList.add("seled"); // 为id为optnE的元素添加seled类名
+				document.getElementById("optnE").classList.remove("unseled"); // 为id为optnE的元素移除unseled类名
+				userSelect = 'E'; // 用户当前选项全局变量改为'E'
+			};
+			document.getElementById("continue").disabled = false;
+			// console.log(userSelect);
+		};
 
-			// 定义clsRpls (Class Replace) 函数，以便在sel函数中用较少的代码量实现给HTML元素增减class的功能。此为专用函数，无法用于其他位置
-			function clsAdd(idO, idP, idQ, idR) {
-				var eleO = document.getElementById(idO);
-				var eleP = document.getElementById(idP);
-				var eleQ = document.getElementById(idQ);
-				var eleR = document.getElementById(idR);
-				eleO.classList.remove("seled");
-				eleP.classList.remove("seled");
-				eleQ.classList.remove("seled");
-				eleR.classList.remove("seled");
-				eleO.classList.add("unseled");
-				eleP.classList.add("unseled");
-				eleQ.classList.add("unseled");
-				eleR.classList.add("unseled");
-			};
 
-			// 定义单选函数
-			function sel(opt) {
-				if (opt == 0) {
-					clsAdd("optnB", "optnC", "optnD", "optnE"); // 为id为optnB、optnC、optnD、optnE的元素移除seled类名、添加unseled类名；给id为optnA的元素添加seled类名
-					document.getElementById("optnA").classList.add("seled"); // 为id为optnA的元素添加seled类名
-					document.getElementById("optnA").classList.remove("unseled"); // 为id为optnA的元素移除unseled类名
-					userSelect = 'A'; // 用户当前选项全局变量改为'A'
-				} else if (opt == 1) {
-					clsAdd("optnA", "optnC", "optnD", "optnE"); // 为id为optnA、optnC、optnD、optnE的元素移除seled类名、添加unseled类名；给id为optnB的元素添加seled类名
-					document.getElementById("optnB").classList.add("seled"); // 为id为optnB的元素添加seled类名
-					document.getElementById("optnB").classList.remove("unseled"); // 为id为optnB的元素移除unseled类名
-					userSelect = 'B'; // 用户当前选项全局变量改为'B'
-				} else if (opt == 2) {
-					clsAdd("optnA", "optnB", "optnD", "optnE"); // 为id为optnA、optnB、optnD、optnE的元素移除seled类名、添加unseled类名；给id为optnC的元素添加seled类名
-					document.getElementById("optnC").classList.add("seled"); // 为id为optnC的元素添加seled类名
-					document.getElementById("optnC").classList.remove("unseled"); // 为id为optnC的元素移除unseled类名
-					userSelect = 'C'; // 用户当前选项全局变量改为'C'
-				} else if (opt == 3) {
-					clsAdd("optnA", "optnB", "optnC", "optnE"); // 为id为optnA、optnB、optnC、optnE的元素移除seled类名、添加unseled类名；给id为optnD的元素添加seled类名
-					document.getElementById("optnD").classList.add("seled"); // 为id为optnD的元素添加seled类名
-					document.getElementById("optnD").classList.remove("unseled"); // 为id为optnD的元素移除unseled类名
-					userSelect = 'D'; // 用户当前选项全局变量改为'D'
-				} else if (opt == 4) {
-					clsAdd("optnA", "optnB", "optnC", "optnD"); // 为id为optnA、optnB、optnC、optnD的元素移除seled类名、添加unseled类名；给id为optnE的元素添加seled类名
-					document.getElementById("optnE").classList.add("seled"); // 为id为optnE的元素添加seled类名
-					document.getElementById("optnE").classList.remove("unseled"); // 为id为optnE的元素移除unseled类名
-					userSelect = 'E'; // 用户当前选项全局变量改为'E'
-				};
-				console.log(userSelect);
-			};
-			// 原script.js
-			// 初始变量部分，目前包括：空题组、当前题目、当前题目答案、错题列表、答题状态
-			queList = [], currentQueNum = 1, wrongQues = [], waiting = false, userAnswer = [];
-			// 随机生成题组
-			for (var i = 0; i < 10; i++) {
-				// 定义临时数组
-				var tempQue = [];
-				// 随机卷号题号
-				var paperNum = Math.floor(Math.random() * 13);
-				var queNum = Math.floor(Math.random() * 5);
-				var queAns = data[paperNum].pbls[queNum].asw;
-				// 卷号题号答案推到临时数组
-				tempQue.push(paperNum, queNum, queAns);
-				// 临时数组推到全局题组
-				queList.push(tempQue);
-			};
-			console.table(queList);
-			/* 结果：生成一坨JSON，大致如此：
-			queList = [
-				[卷号, 题号, '答案']
-				// 共重复10次
-			]
-			*/
 
-			function setQue() {
-				// 初始化答题界面
-				// 进度条
-				// document.getElementById("prog-bar").style.width = "0";
-				// document.getElementById("prog-bar").innerHTML = "";
-				// 出题
-				document.getElementById("question").innerHTML = '<span class="emsp">&emsp;</span>'
-					+ data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[0]
-					+ '<br /><span class="emsp">&emsp;</span>'
-					+ data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[1];
-				document.getElementById("textA").innerHTML = data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[2];
-				document.getElementById("textB").innerHTML = data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[3];
-				document.getElementById("textC").innerHTML = data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[4];
-				document.getElementById("textD").innerHTML = data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[5];
-				console.log('currentQueNum: ' + currentQueNum);
-			};
-			setQue();
-			// 为继续按钮添加监听器
-			document.getElementById("continue").addEventListener("click", function () { ctnfn() });
-			// 定义继续函数 (continue function)，用于跳转至下一题
-			function ctnfn() {
-				currentQueNum += 1;
-				alert('currentQueNum (下一题题号): ' + currentQueNum + '\n用户选择: ' + userSelect);
-				document.getElementById("prog-bar").style.width = (currentQueNum - 1) + '0%';
-				document.getElementById("prog-bar").innerHTML = (currentQueNum - 1) + '0%';
-				document.getElementById("optnA").classList.remove("seled");
-				document.getElementById("optnB").classList.remove("seled");
-				document.getElementById("optnC").classList.remove("seled");
-				document.getElementById("optnD").classList.remove("seled");
-				document.getElementById("optnE").classList.remove("seled");
-				document.getElementById("optnA").classList.add("unseled");
-				document.getElementById("optnB").classList.add("unseled");
-				document.getElementById("optnC").classList.add("unseled");
-				document.getElementById("optnD").classList.add("unseled");
-				document.getElementById("optnE").classList.add("unseled");
-				// 存储用户选择为数组，判断对错
-				userAnswer.push(userSelect);
-				userSelect = '';
-				console.log(userAnswer);
-				setQue(); // 刷新题目
-			};
-			// TODO：回答对错判断；最后显示错题列表
-			if (currentQueNum == 11) {
+		// 原script.js
+		// 初始变量部分，目前包括：空题组、当前题目、当前题目答案、错题列表、答题状态
+		queList = [], currentQueNum = 0, wrongQues = [], userAns = [], correctAns = [], result = [], ansCard = [], correctQueNum = 0, queSource = [];
+		// 随机生成题组
+		for (var i = 0; i < 10; i++) {
+			// 定义临时数组
+			var tempQue = [];
+			// 随机卷号题号
+			var paperNum = Math.floor(Math.random() * 13);
+			var queNum = Math.floor(Math.random() * 5);
+			var queAns = data[paperNum].pbls[queNum].asw;
+			// 卷号题号答案推到临时数组
+			tempQue.push(paperNum, queNum, queAns);
+			// 临时数组推到全局题组
+			queList.push(tempQue);
+		};
+		// console.table(queList);
+		/* 结果：生成一坨JSON，大致如此：
+		queList = [
+			[卷号, 题号, '答案']
+			// 共重复10次
+		]
+		*/
+		function setQue() {
+			// 初始化答题界面
+			document.getElementById("question").innerHTML = '<span class="emsp">&emsp;</span>'
+				+ data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[0]
+				+ '<br /><span class="emsp">&emsp;</span>'
+				+ data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[1];
+			document.getElementById("textA").innerHTML = data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[2];
+			document.getElementById("textB").innerHTML = data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[3];
+			document.getElementById("textC").innerHTML = data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[4];
+			document.getElementById("textD").innerHTML = data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[5];
+			document.getElementById("continue").disabled = true;
+			// console.log('currentQueNum: ' + currentQueNum);
+		};
+		setQue();
+		// 为继续按钮添加监听器
+		document.getElementById("continue").addEventListener("click", function () { ctnfn() });
+		// 定义继续函数 (continue function)，用于跳转至下一题
+		function ctnfn() {
+			currentQueNum += 1;
+			// alert('currentQueNum (下一题题号): ' + currentQueNum + '\n用户选择: ' + userSelect);
+			document.getElementById("prog-bar").style.width = (currentQueNum) + '0%';
+			document.getElementById("prog-bar").innerHTML = (currentQueNum) + '0%';
+			document.getElementById("optnA").classList.remove("seled");
+			document.getElementById("optnB").classList.remove("seled");
+			document.getElementById("optnC").classList.remove("seled");
+			document.getElementById("optnD").classList.remove("seled");
+			document.getElementById("optnE").classList.remove("seled");
+			document.getElementById("optnA").classList.add("unseled");
+			document.getElementById("optnB").classList.add("unseled");
+			document.getElementById("optnC").classList.add("unseled");
+			document.getElementById("optnD").classList.add("unseled");
+			document.getElementById("optnE").classList.add("unseled");
+			// 存储用户选择为数组，判断对错
+			userAns.push(userSelect);
+			userSelect = '';
+			if (currentQueNum == 10) {
 				info();
 			};
-			// 定义info函数显示错题列表
-			function info() {
-				// 删除所有元素
-				for (var i = 0; i < 3; i++) {
-					document.body.firstElementChild.remove()
-				}
+			setQue(); // 刷新题目
+		};
+
+		function debug() {
+			userAns = ['A', 'B', 'C', 'D', 'E', 'A', 'B', 'C', 'D', 'E'];// debug专用
+			info();
+		};
+
+		// 定义info函数显示错题列表
+		function info() {
+			// 删除所有元素
+			for (var i = 0; i < 4; i++) {
+				document.body.firstElementChild.remove();
 			};
+			/*
+			// 答题卡，预期效果：
+			ansCard = [
+				['A', 'B', 'C', 'D', 'E', 'A', 'B', 'C', 'D', 'E'], // 正确答案 (queList[i][2])
+				['E', 'E', 'E', 'E', 'E', 'E', 'E', 'E', 'E', 'E'], // 用户答案 (userAns)
+				[false, false, false, false, true, false, false, false, false, true] // 正确情况，使用布尔值表示，true表示对，false表示错
+			]
+			*/
+			for (var i = 0; i < 10; i++) {
+				correctAns.push(queList[i][2]);
+			};
+			ansCard.push(correctAns, userAns);
+			for (var i = 0; i < 10; i++) {
+				if (ansCard[0][i] == ansCard[1][i]) {
+					result.push(true);
+					correctQueNum++;
+				} else {
+					result.push(false);
+				};
+				queSource.push([queList[i][0], queList[i][1]]);
+			};
+			ansCard.push(result, queSource, correctQueNum);
+			showResult();
+		};
+		function showResult() {
+
 		}
 	</script>
 </body>
+
+<!-- TODO：最后显示错题列表 -->
 
 </html>
