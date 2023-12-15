@@ -142,31 +142,25 @@
 			document.getElementById("continue").addEventListener("click", function () { ctnfn() });
 			// 定义继续函数 (continue function)，用于跳转至下一题
 			function ctnfn() {
-				if (userSelect = '') {
-					alert('选一下啊，不会就选E');
-				} else {
-					currentQueNum += 1;
-					alert('currentQueNum (下一题题号): ' + currentQueNum + '\n用户选择: ' + userSelect);
-					document.getElementById("prog-bar").style.width = (currentQueNum - 1) + '0%';
-					document.getElementById("prog-bar").innerHTML = (currentQueNum - 1) + '0%';
-					document.getElementById("optnA").classList.remove("seled");
-					document.getElementById("optnB").classList.remove("seled");
-					document.getElementById("optnC").classList.remove("seled");
-					document.getElementById("optnD").classList.remove("seled");
-					document.getElementById("optnE").classList.remove("seled");
-					document.getElementById("optnA").classList.add("unseled");
-					document.getElementById("optnB").classList.add("unseled");
-					document.getElementById("optnC").classList.add("unseled");
-					document.getElementById("optnD").classList.add("unseled");
-					document.getElementById("optnE").classList.add("unseled");
-					// 存储用户选择为数组，判断对错
-					userAnswer.push(userSelect);
-					userSelect = '';
-					console.log(userAnswer);
-					setQue(); // 刷新题目
-				}
-
-
+				currentQueNum += 1;
+				alert('currentQueNum (下一题题号): ' + currentQueNum + '\n用户选择: ' + userSelect);
+				document.getElementById("prog-bar").style.width = (currentQueNum - 1) + '0%';
+				document.getElementById("prog-bar").innerHTML = (currentQueNum - 1) + '0%';
+				document.getElementById("optnA").classList.remove("seled");
+				document.getElementById("optnB").classList.remove("seled");
+				document.getElementById("optnC").classList.remove("seled");
+				document.getElementById("optnD").classList.remove("seled");
+				document.getElementById("optnE").classList.remove("seled");
+				document.getElementById("optnA").classList.add("unseled");
+				document.getElementById("optnB").classList.add("unseled");
+				document.getElementById("optnC").classList.add("unseled");
+				document.getElementById("optnD").classList.add("unseled");
+				document.getElementById("optnE").classList.add("unseled");
+				// 存储用户选择为数组，判断对错
+				userAnswer.push(userSelect);
+				userSelect = '';
+				console.log(userAnswer);
+				setQue(); // 刷新题目
 			};
 			// TODO：回答对错判断；最后显示错题列表
 			if (currentQueNum == 11) {
