@@ -23,7 +23,7 @@ div#header {
 
 #prog-container {
 	width: 90%;
-	height: 16px;
+	height: 12px;
 	margin: 0 auto;
 	border-radius: 8px;
 	background-color: #e5e5e5;
@@ -31,9 +31,9 @@ div#header {
 
 #prog-bar {
 	width: 0%;
-	height: 16px;
-	font-size: 14px;
-	line-height: 16px;
+	height: 12px;
+	font-size: 12px;
+	line-height: 12px;
 	text-align: center;
 	color: #FFFFFF;
 	border-radius: 8px;
@@ -47,9 +47,9 @@ div#header {
 
 #options div {
 	/* 左右居中 */
-	margin: auto;
 	width: 360px;
 	height: 48px;
+	margin: auto;
 	text-align: center;
 	margin-bottom: 6px;
 	border-radius: 8px;
@@ -84,19 +84,20 @@ div#header {
 }
 
 #options div span.text {
-	font-size: 18px;
 	color: #4b4b4b;
+	font-size: 18px;
 	line-height: 48px;
 }
 
-#continue {
+#continue,
+#reload {
 	width: 120px;
 	border: none;
 	height: 48px;
 	cursor: pointer;
 	font-size: 16px;
 	color: #FFFFFF;
-	line-height: 46px;
+	line-height: 44px;
 	font-weight: bold;
 	border-radius: 14px;
 	background-color: #58cc02;
@@ -107,20 +108,23 @@ div#header {
 	position: fixed;
 }
 
-#continue:hover {
+#continue:hover,
+#reload:hover {
 	background-color: #61e002;
 	border-bottom: 4px solid #72c836;
 }
 
-#continue:active {
+#continue:active,
+#reload:active {
 	border: none;
 	transform: translateY(1px);
 }
 
-#continue:disabled {
+#continue:disabled,
+#reload:disabled {
+	border: none;
 	color: #afafaf;
 	background-color: #e5e5e5;
-	border: none;
 }
 
 .seled {
@@ -134,3 +138,79 @@ div#header {
 	background-color: #ddf4ff;
 	border-bottom: 4px solid #84d8ff;
 }
+
+/* 页面宽度小于等于600px时 */
+@media (max-width: 600px) {
+	#prog-container {
+		width: 90%;
+	}
+}
+
+/* 页面宽度大于600px时 */
+@media (min-width: 601px) {
+	#prog-container {
+		width: 512px;
+	}
+
+	#question {
+		width: 512px;
+		margin: auto;
+	}
+}
+
+
+
+
+
+/* 结果展示 */
+body {
+	text-align: center;
+}
+
+table#result,
+table#result th,
+table#result td {
+	font-size: 16px;
+	border: 1px solid #e5e5e5;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+table#result tr:nth-child(even) {
+	background-color: #f3f3f3;
+}
+
+table#result tr:hover {
+	background-color: #e5e5e5;
+}
+
+table#result td {
+	height: 24px;
+	line-height: 24px;
+}
+
+table#result {
+	width: 320px;
+	margin: auto;
+}
+
+table#result th {
+	line-height: 24px;
+	height: 24px;
+	color: #FFFFFF;
+	background-color: #58cc02;
+}
+
+/* 页面宽度小于等于600px时 */
+/* @media (max-width: 600px) {
+	table#result {
+		width: 90%;
+	}
+} */
+
+/* 页面宽度大于600px时 */
+/* @media (min-width: 601px) {
+	table#result {
+		width: 288px;
+	}
+} */

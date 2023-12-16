@@ -1,395 +1,558 @@
 var list = [
-	
+	["Are you serious?", "你说真的吗？"],
+	["Are you sure", "你确定吗"],
+	["As you wish", "如你所愿"],
+	["Ask please", "请问"],
+	["Be careful", "小心"],
+	["By all means", "当然可以、一定"],
+	["Can I help you", "我可以帮你吗"],
+	["Certainly not", "当然不"],
+	["Cheer up", "振作起来"],
+	["Cheers", "干杯"],
+	["Come on", "加油；快点"],
+	["Congratulations", "祝贺"],
+	["Cool", "酷"],
+	["Could you help me", "你可以帮我吗"],
+	["Do as you like", "随你便"],
+	["Do you have a room", "你有房间吗"],
+	["Don't be a wet blanket", "别扫兴"],
+	["Don't bother", "不用麻烦了；不打扰了"],
+	["Don't mention it", "别客气；别提了；不客气；不用介意；没关系"],
+	["Don't trouble me", "别麻烦我"],
+	["Don't worry", "别担心"],
+	["Enjoy yourself", "过得愉快；玩得开心"],
+	["Exactly", "一点不错，完全正确"],
+	["Excuse me", "对不起，打扰一下"],
+	["forget it", "得了吧；算了吧；没关系；不必在意"],
+	["Go ahead", "去吧，问吧，干吧，做吧，继续说；开始做；着手干；着手做某事，尽管去做；表示鼓励对方去做刚提到的事"],
+	["Go for it", "去争取"],
+	["Good job", "干得不错"],
+	["Good luck", "祝好运"],
+	["had been", "已经去过了（过去完成时态）"],
+	["had gone", "已经去了还没回来（过去完成时态）"],
+	["Have a good time", "过得愉快；玩得开心"],
+	["Have a good trip", "祝旅途愉快"],
+	["have been", "已经去过了（现在完成时态）"],
+	["have gone", "已经去了还没回来（现在完成时态）"],
+	["Have you bought the book", "你买了那本书吗"],
+	["Help yourself", "随意；随便；别客气；请自便"],
+	["How is it going", "最近还好吗"],
+	["How many watches do you have", "你有多少块手表"],
+	["How much is your watch", "你的表多少钱"],
+	["How much is your watch", "你的手表多少钱"],
+	["I beg to differ", "恕我不能同意"],
+	["I can't agree more", "我完全同意"],
+	["I can't stand it", "我受不了了"],
+	["I couldn't agree more", "我非常同意"],
+	["I didn't get it", "我不明白"],
+	["I don't know", "我不知道"],
+	["I got it", "我明白了"],
+	["I have no idea", "我不知道"],
+	["I hope I didn't bother you", "希望没打扰到你"],
+	["I think so", "我想是这样的"],
+	["I'd love to", "我愿意"],
+	["I'm afraid not", "恐怕不是这样的"],
+	["I'm all ears", "我洗耳恭听"],
+	["I'm fine", "我很好"],
+	["I'm happy to hear that", "我很高兴听你这么说"],
+	["I'm in no hurry", "我不着急"],
+	["I'm not free", "我没空"],
+	["I'm sorry", "对不起"],
+	["It couldn't be worse", "情况不能再糟了"],
+	["It depends", "看情况而定"],
+	["It doesn't matter", "没关系"],
+	["It is up to you", "取决于你"],
+	["It just depends", "看情况"],
+	["it was boring", "它是令人厌烦的"],
+	["it was expensive", "它是昂贵的"],
+	["it was pleasant", "它是令人愉快的"],
+	["it was terrible", "它是令人可怕的"],
+	["It's a deal", "一言为定；就这样定了"],
+	["It's a piece of cake", "小菜一碟"],
+	["It's a pity", "真遗憾"],
+	["It's a pleasure", "乐意效劳"],
+	["it's great", "极好的"],
+	["It's hard to say", "这很难说"],
+	["It's my pleasure", "别客气"],
+	["It's my share", "我该付一份"],
+	["It's not my cup of tea", "我对此事不感兴趣"],
+	["It's nothing", "没事"],
+	["it's ordinary", "普通的"],
+	["it's possible", "可能的"],
+	["it's terrible", "可怕的"],
+	["It's up to you", "这取决于你；由你定；你决定吧"],
+	["Keep cool", "保持冷静，有话好好说"],
+	["Keep it up", "保持下去"],
+	["Make yourself at home", "别拘束"],
+	["My pleasure", "不用谢；乐意效劳；那是我应该做的"],
+	["Neither do I", "我也不"],
+	["Never mind", "没关系；不必担心"],
+	["No comment", "无可奉告"],
+	["No doubt", "毫无疑问"],
+	["No hurry", "不着急"],
+	["No offence", "无意冒犯"],
+	["No problem", "没问题"],
+	["No way", "决不，没门"],
+	["No way", "决不，没门；表示拒绝"],
+	["No wonder", "难怪"],
+	["None of your business", "不关你的事"],
+	["Nonsense", "胡说八道"],
+	["Not at all", "一点也不"],
+	["Not exactly", "不完全是这样"],
+	["Not in the least", "一点也不"],
+	["Not really", "不全是这样"],
+	["Of course not", "当然不"],
+	["Oh, thanks", "谢谢"],
+	["Pardon", "能再重复一遍吗"],
+	["Pardon me", "对不起，再说一遍"],
+	["Really", "真的吗"],
+	["Same to you", "和你一样"],
+	["So long", "再见"],
+	["So what", "那又怎样"],
+	["Some hope was lost, some not", "有些希望失去了，有些没有"],
+	["Sorry", "抱歉"],
+	["Sorry to hear that", "很难过听到那个消息"],
+	["Sounds great", "听起来好极了"],
+	["Sure", "当然，的确"],
+	["Take it easy", "别担心；别紧张；放轻松"],
+	["Take your time", "别着急；慢慢来；从容做"],
+	["Thank you all the same", "还是谢谢你了"],
+	["That's a good idea", "好主意"],
+	["That's a great idea", "是个好主意"],
+	["That's all right", "不要紧，没关系"],
+	["That's great", "那太棒了"],
+	["That's interesting", "那很有趣"],
+	["That's it", "就是这样"],
+	["That's OK", "好的；没关系"],
+	["That's so easy", "太容易了"],
+	["The same to you", "你也一样"],
+	["We'd better not", "我们最好不"],
+	["We'll be fine", "我们很好"],
+	["Well done", "干得好；做得好"],
+	["What a pity", "真可惜"],
+	["What are you", "你做什么工作的"],
+	["What are you doing", "你正在做什么"],
+	["What are you up to", "你在忙什么"],
+	["What day is it today", "今天星期几"],
+	["What for", "为什么"],
+	["What is it over there", "那边是什么"],
+	["What time is it", "几点钟了"],
+	["What time is it now", "现在什么时间"],
+	["What would you like", "你想要什么"],
+	["What's for", "为什么"],
+	["What's the date today", "今天几号"],
+	["What's the matter with you", "你怎么了"],
+	["What's up", "怎么了；出什么事了"],
+	["What's wrong", "你怎么了"],
+	["What's your opinion", "你怎么说"],
+	["Why bother", "何必费心；何必麻烦"],
+	["Why not", "为何不"],
+	["With pleasure", "好的，乐意效劳"],
+	["Yes, please", "是的，请"],
+	["You are not alone", "你不是一个人"],
+	["You are so nice", "你真好"],
+	["You are welcome", "别客气"],
+	["You bet", "当然"],
+	["You got me there", "你难住我了"],
+	["You have green fingers", "你是园艺高手"],
+	["You never know", "你永远不会知道"],
+	["You read my mind", "由你来决定"],
+	["You said it", "你说对了；我完全同意"],
+	["You'd better not", "你最好不要；表示委婉的拒绝"],
+	["You're crazy", "你疯了"],
+	["You're lucky", "你真幸运"],
+	["You're welcome", "不客气"]
 ];
+/*
 var simplifiedAllOptionTrans = [
 	[
-		["Why bother?", "何必麻烦？"]
-		["What for?", "为什么？"]
-		["You got me there.", "你难住我了。"]
+		["Why bother?", "何必麻烦？"],
+		["What for?", "为什么？"],
+		["You got me there.", "你难住我了。"],
 		["You said it.", "你说对了；我完全同意。"]
 	],
 	[
-		["Don't bother", "不用麻烦了"]
-		["No hurry", "不着急"]
-		["Go ahead", "开始做；着手干"]
+		["Don't bother", "不用麻烦了"],
+		["No hurry", "不着急"],
+		["Go ahead", "开始做；着手干"],
 		["No problem", "没问题"]
 	],
 	[
-		["See you later", null]
-		["I didn't know that", null]
-		["Hold on, please", null]
+		["See you later", null],
+		["I didn't know that", null],
+		["Hold on, please", null],
 		["I hope I didn't bother you", "希望没打扰到你"]
 	],
 	[
-		["I didn't get it.", "我不明白。"]
-		["You read my mind.", "由你来决定。"]
-		["You never know.", "你永远不会知道。"]
+		["I didn't get it.", "我不明白。"],
+		["You read my mind.", "由你来决定。"],
+		["You never know.", "你永远不会知道。"],
 		["It's up to you.", "你猜透了我的想法。"]
 	],
 	[
-		["What's up", "出什么事了"]
-		["What's for", "为什么"]
-		["What are you up to", "你在忙什么"]
+		["What's up", "出什么事了"],
+		["What's for", "为什么"],
+		["What are you up to", "你在忙什么"],
 		["So what", "那又怎么样"]
 	],
 	[
-		["No problem", "没问题"]
-		["No hurry", "不忙"]
-		["Come on", "加油"]
+		["No problem", "没问题"],
+		["No hurry", "不忙"],
+		["Come on", "加油"],
 		["That's OK", "没关系"]
 	],
 	[
-		["Don't mention it", "不客气"]
-		["Go ahead", "前进，去吧"]
-		["Take it easy", "放轻松一点"]
+		["Don't mention it", "不客气"],
+		["Go ahead", "前进，去吧"],
+		["Take it easy", "放轻松一点"],
 		["It couldn't be worse", "情况不能再糟了"]
 	],
 	[
-		["So long", "再见"]
-		["Sounds great", "听起来好极了"]
-		["Good luck", "好运"]
+		["So long", "再见"],
+		["Sounds great", "听起来好极了"],
+		["Good luck", "好运"],
 		["Have a good time", "过得愉快，玩的很开心"]
 	],
 	[
-		["Excuse me", "对不起，打扰一下"]
-		["Sorry", "抱歉"]
-		["Sure", "当然，的确"]
+		["Excuse me", "对不起，打扰一下"],
+		["Sorry", "抱歉"],
+		["Sure", "当然，的确"],
 		["No way", "决不，没门"]
 	],
 	[
-		["No way", "没门；表示拒绝"]
-		["Go ahead", "问吧，干吧，做吧；表示鼓励对方去做刚提到的事"]
-		["You'd better not", "你最好不要；表示委婉的拒绝"]
+		["No way", "没门；表示拒绝"],
+		["Go ahead", "问吧，干吧，做吧；表示鼓励对方去做刚提到的事"],
+		["You'd better not", "你最好不要；表示委婉的拒绝"],
 		["I think so", "我想是这样的"]
 	],
 	[
-		["Good job", "干得不错"]
-		["Come on", "快点"]
-		["Go ahead", "问吧；继续说"]
+		["Good job", "干得不错"],
+		["Come on", "快点"],
+		["Go ahead", "问吧；继续说"],
 		["Help yourself", "请自便"]
 	],
 	[
-		["Are you all right", "你还好吗"]
-		["Have you bought the book", "你买了那本书吗"]
-		["Can I help you", "我可以帮你吗"]
+		["Are you all right", "你还好吗"],
+		["Have you bought the book", "你买了那本书吗"],
+		["Can I help you", "我可以帮你吗"],
 		["Do you have a room", "你有房间吗"]
 	],
 	[
-		["What time is it", "几点钟了"]
-		["What's the date today", "今天几号"]
-		["How much is your watch", "你的手表多少钱"]
+		["What time is it", "几点钟了"],
+		["What's the date today", "今天几号"],
+		["How much is your watch", "你的手表多少钱"],
 		["Could you help me", "你可以帮我吗"]
 	],
 	[
-		["That's all right", "不要紧"]
-		["Don't mention it", "别提了"]
-		["You're welcome", "不客气"]
+		["That's all right", "不要紧"],
+		["Don't mention it", "别提了"],
+		["You're welcome", "不客气"],
 		["Oh, thanks", "谢谢"]
 	],
 	[
-		["It's nothing", "没事"]
-		["Be careful", "小心"]
-		["Go ahead", "去吧"]
+		["It's nothing", "没事"],
+		["Be careful", "小心"],
+		["Go ahead", "去吧"],
 		["No problem", "没问题"]
 	],
 	[
-		["Congratulations", "祝贺"]
-		["That's great", "那太棒了"]
-		["Well done", "做得好"]
+		["Congratulations", "祝贺"],
+		["That's great", "那太棒了"],
+		["Well done", "做得好"],
 		["Sorry to hear that", "很难过听到那个消息"]
 	],
 	[
-		["Enjoy yourself", "过得愉快"]
-		["You're welcome", "不客气"]
-		["That's interesting", "那很有趣"]
+		["Enjoy yourself", "过得愉快"],
+		["You're welcome", "不客气"],
+		["That's interesting", "那很有趣"],
 		["The same to you", "你也一样"]
 	],
 	[
-		["have a good time!", "玩得高兴！"]
-		["I'm happy to hear that.", "我很高兴听你这么说。"]
-		["good luck!", "祝你好运！"]
+		["have a good time!", "玩得高兴！"],
+		["I'm happy to hear that.", "我很高兴听你这么说。"],
+		["good luck!", "祝你好运！"],
 		["congratulations!", "祝贺你！"]
 	],
 	[
-		["Certainly not", "当然不"]
-		["Enjoy yourself", "玩得开心"]
-		["Don't trouble me", "别麻烦我"]
+		["Certainly not", "当然不"],
+		["Enjoy yourself", "玩得开心"],
+		["Don't trouble me", "别麻烦我"],
 		["Yes, please", "是的，请"]
 	],
 	[
-		["My pleasure", "乐意效劳"]
-		["Not exactly", "不完全是这样"]
-		["With pleasure", "愉快地"]
+		["My pleasure", "乐意效劳"],
+		["Not exactly", "不完全是这样"],
+		["With pleasure", "愉快地"],
 		["No problem", "没问题"]
 	],
 	[
-		["Not at all.", "一点也不。"]
-		["Of course not.", "当然不。"]
-		["You'd better not.", "你最好不。"]
+		["Not at all.", "一点也不。"],
+		["Of course not.", "当然不。"],
+		["You'd better not.", "你最好不。"],
 		["Sure.", "当然。"]
 	],
 	[
-		["What do you want", null]
-		["Are you ready to order", null]
-		["What's the specialty here", null]
+		["What do you want", null],
+		["Are you ready to order", null],
+		["What's the specialty here", null],
 		["What would you like to drink", null]
 	],
 	[
-		["What are you doing", "你正在做什么"]
-		["What are you", "你做什么工作的"]
-		["What's wrong", "你怎么了"]
+		["What are you doing", "你正在做什么"],
+		["What are you", "你做什么工作的"],
+		["What's wrong", "你怎么了"],
 		["How is it going", "最近还好吗"]
 	],
 	[
-		["it's nothing", null]
-		["it's all right", null]
-		["with pleasure", "好的，乐意效劳"]
+		["it's nothing", null],
+		["it's all right", null],
+		["with pleasure", "好的，乐意效劳"],
 		["my pleasure", "那是我应该做的"]
 	],
 	[
-		["Don't mention it", "没关系"]
-		["Forget it", "不必在意"]
-		["Exactly", "一点不错，完全正确"]
+		["Don't mention it", "没关系"],
+		["Forget it", "不必在意"],
+		["Exactly", "一点不错，完全正确"],
 		["I beg to differ", "恕我不能同意"]
 	],
 	[
-		["Don't mention it.", "别客气。"]
-		["What's up?", "怎么了？"]
-		["I got it.", "我明白了。"]
+		["Don't mention it.", "别客气。"],
+		["What's up?", "怎么了？"],
+		["I got it.", "我明白了。"],
 		["Never mind.", "没关系。"]
 	],
 	[
-		["It's a pleasure", "乐意效劳"]
-		["Ask please", "请问"]
-		["Help yourself", "别客气"]
+		["It's a pleasure", "乐意效劳"],
+		["Ask please", "请问"],
+		["Help yourself", "别客气"],
 		["Go ahead", "去吧，问吧"]
 	],
 	[
-		["Make yourself at home", "别拘束"]
-		["Take it easy", "别紧张"]
-		["Take your time", "慢慢来"]
+		["Make yourself at home", "别拘束"],
+		["Take it easy", "别紧张"],
+		["Take your time", "慢慢来"],
 		["Enjoy yourself", "玩的愉快"]
 	],
 	[
-		["Take your time", "别着急；从容做"]
-		["Take it easy", "别担心；放轻松"]
-		["Don't mention it", "不用介意"]
+		["Take your time", "别着急；从容做"],
+		["Take it easy", "别担心；放轻松"],
+		["Don't mention it", "不用介意"],
 		["Don't bother", "不用麻烦了；不打扰了"]
 	],
 	[
-		["Good luck", "祝好运"]
-		["Cheer up", "振作起来"]
-		["Same to you", "和你一样"]
+		["Good luck", "祝好运"],
+		["Cheer up", "振作起来"],
+		["Same to you", "和你一样"],
 		["Keep it up", "保持下去"]
 	],
 	[
-		["No wonder", "难怪"]
-		["No offence", "无意冒犯"]
-		["No comment", "无可奉告"]
+		["No wonder", "难怪"],
+		["No offence", "无意冒犯"],
+		["No comment", "无可奉告"],
 		["No doubt", "毫无疑问"]
 	],
 	[
-		["Not really", "不全是这样"]
-		["Don't mention it", "别客气"]
-		["It's up to you", "你决定吧"]
+		["Not really", "不全是这样"],
+		["Don't mention it", "别客气"],
+		["It's up to you", "你决定吧"],
 		["By all means", "当然可以、一定"]
 	],
 	[
-		["What for", "为什么"]
-		["Why not", "为何不"]
-		["So what", "那又怎样"]
+		["What for", "为什么"],
+		["Why not", "为何不"],
+		["So what", "那又怎样"],
 		["Why bother", "何必费心"]
 	],
 	[
-		["You got me there", "你难住我了"]
-		["I don't know", "我不知道"]
-		["As you wish", "如你所愿"]
+		["You got me there", "你难住我了"],
+		["I don't know", "我不知道"],
+		["As you wish", "如你所愿"],
 		["I couldn't agree more", "我非常同意"]
 	],
 	[
-		["It doesn't matter", "没关系"]
-		["I can't agree more", "我完全同意"]
-		["I have no idea", "我不知道"]
+		["It doesn't matter", "没关系"],
+		["I can't agree more", "我完全同意"],
+		["I have no idea", "我不知道"],
 		["It's a pity", "真遗憾"]
 	],
 	[
-		["No way", "没门"]
-		["Go ahead", "着手做某事，尽管去做"]
-		["Keep cool", "保持冷静，有话好好说"]
+		["No way", "没门"],
+		["Go ahead", "着手做某事，尽管去做"],
+		["Keep cool", "保持冷静，有话好好说"],
 		["Never mind", "不必担心"]
 	],
 	[
-		["That's it", "就是这样"]
-		["Well done", "干得好"]
-		["Cheers", "干杯"]
+		["That's it", "就是这样"],
+		["Well done", "干得好"],
+		["Cheers", "干杯"],
 		["Nonsense", "胡说八道"]
 	],
 	[
-		["have been", "已经去过了（现在完成时态）"]
-		["have gone", "已经去了还没回来（现在完成时态）"]
-		["had been", "已经去过了（过去完成时态）"]
+		["have been", "已经去过了（现在完成时态）"],
+		["have gone", "已经去了还没回来（现在完成时态）"],
+		["had been", "已经去过了（过去完成时态）"],
 		["had gone", "已经去了还没回来（过去完成时态）"]
 	],
 	[
-		["forget it", "得了吧；算了吧；没关系"]
-		["my pleasure", "不用谢"]
-		["help yourself", "随便"]
+		["forget it", "得了吧；算了吧；没关系"],
+		["my pleasure", "不用谢"],
+		["help yourself", "随便"],
 		["pardon me", "对不起，再说一遍"]
 	],
 	[
-		["I'm not free", "我没空"]
-		["We'd better not", "我们最好不"]
-		["We'll be fine", "我们很好"]
+		["I'm not free", "我没空"],
+		["We'd better not", "我们最好不"],
+		["We'll be fine", "我们很好"],
 		["I'd love to", "我愿意"]
 	],
 	[
-		["So what", "那又如何"]
-		["Really", "真的吗"]
-		["Pardon", "能再重复一遍吗"]
+		["So what", "那又如何"],
+		["Really", "真的吗"],
+		["Pardon", "能再重复一遍吗"],
 		["What for", "为了什么？"]
 	],
 	[
-		["You're crazy", "你疯了"]
-		["You're lucky", "你真幸运"]
-		["You'd better not", "你最好不要"]
+		["You're crazy", "你疯了"],
+		["You're lucky", "你真幸运"],
+		["You'd better not", "你最好不要"],
 		["You never know", "你永远不会懂"]
 	],
 	[
-		["All of the hope was lost", null]
-		["No hope was lost", null]
-		["None of the hope was lost", null]
+		["All of the hope was lost", null],
+		["No hope was lost", null],
+		["None of the hope was lost", null],
 		["Some hope was lost, some not", "有些希望失去了，有些没有"]
 	],
 	[
-		["It's a piece of cake", "小菜一碟"]
-		["Don't be a wet blanket", "别扫兴"]
-		["You have green fingers", "你是园艺高手"]
+		["It's a piece of cake", "小菜一碟"],
+		["Don't be a wet blanket", "别扫兴"],
+		["You have green fingers", "你是园艺高手"],
 		["I'm all ears", "我洗耳恭听"]
 	],
 	[
-		["Don't worry about it", null]
-		["It's my share", "我该付一份"]
-		["None of your business", "不关你的事"]
+		["Don't worry about it", null],
+		["It's my share", "我该付一份"],
+		["None of your business", "不关你的事"],
 		["It's up to you", "由你负责"]
 	],
 	[
-		["Excuse me", "对不起，打扰一下"]
-		["Sorry", "抱歉"]
-		["Sure", "当然，的确"]
+		["Excuse me", "对不起，打扰一下"],
+		["Sorry", "抱歉"],
+		["Sure", "当然，的确"],
 		["No way", "决不，没门"]
 	],
 	[
-		["it was boring", "它是令人厌烦的"]
-		["it was pleasant", "它是令人愉快的"]
-		["it was terrible", "它是令人可怕的"]
+		["it was boring", "它是令人厌烦的"],
+		["it was pleasant", "它是令人愉快的"],
+		["it was terrible", "它是令人可怕的"],
 		["it was expensive", "它是昂贵的"]
 	],
 	[
-		["What would you like", "你想要什么"]
-		["What is it over there", "那边是什么"]
-		["What day is it today", "今天星期几"]
+		["What would you like", "你想要什么"],
+		["What is it over there", "那边是什么"],
+		["What day is it today", "今天星期几"],
 		["What's the matter with you", "你怎么了"]
 	],
 	[
-		["Never mind", "没有关系"]
-		["No problem", "没问题"]
-		["Have a good trip", "祝你们旅途愉快"]
+		["Never mind", "没有关系"],
+		["No problem", "没问题"],
+		["Have a good trip", "祝你们旅途愉快"],
 		["It's my pleasure", "别客气"]
 	],
 	[
-		["I'm not free", "我没空"]
-		["We'd better not", "我们最好不"]
-		["We'll be fine", "我们很好"]
+		["I'm not free", "我没空"],
+		["We'd better not", "我们最好不"],
+		["We'll be fine", "我们很好"],
 		["I'd love to", "我愿意"]
 	],
 	[
-		["Do as you like", "随你便"]
-		["Go for it", "去争取"]
-		["Enjoy yourself", "玩得愉快"]
+		["Do as you like", "随你便"],
+		["Go for it", "去争取"],
+		["Enjoy yourself", "玩得愉快"],
 		["Good luck", "祝好运"]
 	],
 	[
-		["I'm fine", "我很好"]
-		["Never mind", "没关系"]
-		["You're welcome", "不客气"]
+		["I'm fine", "我很好"],
+		["Never mind", "没关系"],
+		["You're welcome", "不客气"],
 		["The same to you", "你也一样"]
 	],
 	[
-		["No problem.", "没问题。"]
-		["Are you serious?", "你说真的吗？"]
-		["Cool!", "酷！"]
+		["No problem.", "没问题。"],
+		["Are you serious?", "你说真的吗？"],
+		["Cool!", "酷！"],
 		["That's so easy.", "太容易了。"]
 	],
 	[
-		["What's up", "怎么了"]
-		["So what", "那又怎样"]
-		["Are you sure", "你确定吗"]
+		["What's up", "怎么了"],
+		["So what", "那又怎样"],
+		["Are you sure", "你确定吗"],
 		["What's your opinion", "你怎么说"]
 	],
 	[
-		["You are not alone", "你不是一个人"]
-		["It's hard to say", "这很难说"]
-		["I'm afraid not", "恐怕不是这样的"]
+		["You are not alone", "你不是一个人"],
+		["It's hard to say", "这很难说"],
+		["I'm afraid not", "恐怕不是这样的"],
 		["It's up to you", "这取决于你"]
 	],
 	[
-		["I can't stand it", "我受不了了"]
-		["I'm in no hurry", "我不着急"]
-		["That's a great idea", "是个好主意"]
+		["I can't stand it", "我受不了了"],
+		["I'm in no hurry", "我不着急"],
+		["That's a great idea", "是个好主意"],
 		["It's not my cup of tea", "我对此事不感兴趣"]
 	],
 	[
-		["It's a deal", "一言为定"]
-		["You bet", "当然"]
-		["It is up to you", "取决于你"]
+		["It's a deal", "一言为定"],
+		["You bet", "当然"],
+		["It is up to you", "取决于你"],
 		["Of course not", "当然不"]
 	],
 	[
-		["Forget it", "算了吧"]
-		["Cheer up", "振作起来"]
-		["Neither do I", "我也不"]
+		["Forget it", "算了吧"],
+		["Cheer up", "振作起来"],
+		["Neither do I", "我也不"],
 		["What a pity", "真可惜"]
 	],
 	[
-		["Help yourself.", "随意。"]
-		["No problem.", "没问题。"]
-		["It's a deal.", "就这样定了。"]
+		["Help yourself.", "随意。"],
+		["No problem.", "没问题。"],
+		["It's a deal.", "就这样定了。"],
 		["It's up to you.", "由你定。"]
 	],
 	[
-		["It depends.", "看情况而定"]
-		["That's OK.", "好的"]
-		["Never mind.", "没关系"]
+		["It depends.", "看情况而定"],
+		["That's OK.", "好的"],
+		["Never mind.", "没关系"],
 		["It doesn't matter.", "没关系"]
 	],
 	[
-		["You are welcome", "别客气"]
-		["That's a good idea", "好主意"]
-		["Don't worry", "别担心"]
+		["You are welcome", "别客气"],
+		["That's a good idea", "好主意"],
+		["Don't worry", "别担心"],
 		["You are so nice", "你真好"]
 	],
 	[
-		["What's the date today", "今天几号"]
-		["How much is your watch", "你的表多少钱"]
-		["What time is it now", "现在什么时间"]
+		["What's the date today", "今天几号"],
+		["How much is your watch", "你的表多少钱"],
+		["What time is it now", "现在什么时间"],
 		["How many watches do you have", "你有多少块手表"]
 	],
 	[
-		["I'm sorry", "对不起"]
-		["I'd love to", "我愿意"]
-		["That's all right", "不要紧，没关系"]
+		["I'm sorry", "对不起"],
+		["I'd love to", "我愿意"],
+		["That's all right", "不要紧，没关系"],
 		["Come on", "加油；快点"]
 	],
 	[
-		["it's great", "极好的"]
-		["it's possible", "可能的"]
-		["it's terrible", "可怕的"]
+		["it's great", "极好的"],
+		["it's possible", "可能的"],
+		["it's terrible", "可怕的"],
 		["it's ordinary", "普通的"]
 	],
 	[
-		["It just depends", "看情况"]
-		["It's my pleasure", "别客气"]
-		["Not in the least", "一点也不"]
+		["It just depends", "看情况"],
+		["It's my pleasure", "别客气"],
+		["Not in the least", "一点也不"],
 		["Thank you all the same", "还是谢谢你了"]
 	]
 ];
@@ -1240,3 +1403,4 @@ var allOptionTrans = [
 		]
 	}
 ]
+*/

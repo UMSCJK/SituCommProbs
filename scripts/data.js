@@ -1,20 +1,39 @@
 function consoleGetPbl(pNum, qNum) { // paperNumber, questionNumber
 	var output = '';
-	output += data[pNum - 1].paperTitle + '\n' + qNum + '. ' + data[pNum - 1].pbls[qNum - 1].eng[0] + '\n' + data[pNum - 1].pbls[qNum - 1].eng[1] + '\n A. ' + data[pNum - 1].pbls[qNum - 1].eng[2] + '\n B. ' + data[pNum - 1].pbls[qNum - 1].eng[3] + '\n C. ' + data[pNum - 1].pbls[qNum - 1].eng[4] + '\n D. ' + data[pNum - 1].pbls[qNum - 1].eng[5];
+	output += data[pNum - 1].paperTitle + '\n' + qNum + '. '
+		+ data[pNum - 1].pbls[qNum - 1].eng[0] + '\n'
+		+ data[pNum - 1].pbls[qNum - 1].eng[1] + '\n A. '
+		+ data[pNum - 1].pbls[qNum - 1].eng[2] + '\n B. '
+		+ data[pNum - 1].pbls[qNum - 1].eng[3] + '\n C. '
+		+ data[pNum - 1].pbls[qNum - 1].eng[4] + '\n D. '
+		+ data[pNum - 1].pbls[qNum - 1].eng[5];
 	console.log(output)
 };
 
 function consoleGetTrans(pNum, qNum) {
 	var output = '';
-	output += data[pNum - 1].paperTitle + '\n' + qNum + data[pNum - 1].pbls[qNum - 1].eng[0] + '\n' + data[pNum - 1].pbls[qNum - 1].eng[1] + '\n A. ' + data[pNum - 1].pbls[qNum - 1].eng[2] + '\n B. ' + data[pNum - 1].pbls[qNum - 1].eng[3] + '\n C. ' + data[pNum - 1].pbls[qNum - 1].eng[4] + '\n D. ' + data[pNum - 1].pbls[qNum - 1].eng[5] + '\n\n答案：' + data[pNum - 1].pbls[qNum - 1].asw + '\n\n翻译：\n' + data[pNum - 1].pbls[qNum - 1].chn[0] + '\n' + data[pNum - 1].pbls[qNum - 1].chn[1] + '\n A. ' + data[pNum - 1].pbls[qNum - 1].chn[2] + '\n B. ' + data[pNum - 1].pbls[qNum - 1].chn[3] + '\n C. ' + data[pNum - 1].pbls[qNum - 1].chn[4] + '\n D. ' + data[pNum - 1].pbls[qNum - 1].chn[5];
+	output += data[pNum - 1].paperTitle + '\n' + qNum
+		+ data[pNum - 1].pbls[qNum - 1].eng[0] + '\n'
+		+ data[pNum - 1].pbls[qNum - 1].eng[1] + '\n A. '
+		+ data[pNum - 1].pbls[qNum - 1].eng[2] + '\n B. '
+		+ data[pNum - 1].pbls[qNum - 1].eng[3] + '\n C. '
+		+ data[pNum - 1].pbls[qNum - 1].eng[4] + '\n D. '
+		+ data[pNum - 1].pbls[qNum - 1].eng[5] + '\n\n答案：'
+		+ data[pNum - 1].pbls[qNum - 1].asw + '\n\n翻译：\n'
+		+ data[pNum - 1].pbls[qNum - 1].chn[0] + '\n'
+		+ data[pNum - 1].pbls[qNum - 1].chn[1] + '\n A. '
+		+ data[pNum - 1].pbls[qNum - 1].chn[2] + '\n B. '
+		+ data[pNum - 1].pbls[qNum - 1].chn[3] + '\n C. '
+		+ data[pNum - 1].pbls[qNum - 1].chn[4] + '\n D. '
+		+ data[pNum - 1].pbls[qNum - 1].chn[5];
 	console.log(output)
 };
 
-// var data = [{ "paperTitle": "模拟卷（一）", "pbls": [{ "asw": "D", "eng": ["–Let's take a coffee break.", "–________ We've been working for hours.", "Why bother?", "What for?", "You got me there.", "You said it."], "chn": ["——我们喝杯咖啡，休息一会儿吧。", "——我完全同意。我们已经连续工作好几个小时了。", "何必麻烦？", "为什么？", "你难住我了。", "你说对了；我完全同意。"] }] }]
+// var data = [{ "paperTitle": "模拟卷 (一)", "pbls": [{ "asw": "D", "eng": ["–Let's take a coffee break.", "–________ We've been working for hours.", "Why bother?", "What for?", "You got me there.", "You said it."], "chn": ["——我们喝杯咖啡，休息一会儿吧。", "——我完全同意。我们已经连续工作好几个小时了。", "何必麻烦？", "为什么？", "你难住我了。", "你说对了；我完全同意。"] }] }]
 
 var data = [
 	{
-		"paperTitle": "模拟卷（一）",
+		"paperTitle": "模拟卷 (一)",
 		"pbls": [
 			{
 				"asw": "D",
@@ -114,7 +133,7 @@ var data = [
 		]
 	},
 	{
-		"paperTitle": "模拟卷（二）",
+		"paperTitle": "模拟卷 (二)",
 		"pbls": [
 			{
 				"asw": "C",
@@ -214,7 +233,7 @@ var data = [
 		]
 	},
 	{
-		"paperTitle": "模拟卷（三）",
+		"paperTitle": "模拟卷 (三)",
 		"pbls": [
 			{
 				"asw": "C",
@@ -314,7 +333,7 @@ var data = [
 		]
 	},
 	{
-		"paperTitle": "模拟卷（四）",
+		"paperTitle": "模拟卷 (四)",
 		"pbls": [
 			{
 				"asw": "D",
@@ -414,7 +433,7 @@ var data = [
 		]
 	},
 	{
-		"paperTitle": "模拟卷（五）",
+		"paperTitle": "模拟卷 (五)",
 		"pbls": [
 			{
 				"asw": "C",
@@ -495,7 +514,7 @@ var data = [
 			{
 				"asw": "C",
 				"eng": [
-					"–How time fies! Since the College Entrance Examinations are approaching, we have to seize every minute.",
+					"–How time flies! Since the College Entrance Examinations are approaching, we have to seize every minute.",
 					"–________. As the saying goes, time lost cannot be won again.",
 					"Don't mention it",
 					"Forget it",
@@ -514,7 +533,7 @@ var data = [
 		]
 	},
 	{
-		"paperTitle": "模拟卷（六）",
+		"paperTitle": "模拟卷 (六)",
 		"pbls": [
 			{
 				"asw": "D",
@@ -614,7 +633,7 @@ var data = [
 		]
 	},
 	{
-		"paperTitle": "模拟卷（七）",
+		"paperTitle": "模拟卷 (七)",
 		"pbls": [
 			{
 				"asw": "B",
@@ -714,7 +733,7 @@ var data = [
 		]
 	},
 	{
-		"paperTitle": "模拟卷（八）",
+		"paperTitle": "模拟卷 (八)",
 		"pbls": [
 			{
 				"asw": "C",
@@ -814,7 +833,7 @@ var data = [
 		]
 	},
 	{
-		"paperTitle": "模拟卷（九）",
+		"paperTitle": "模拟卷 (九)",
 		"pbls": [
 			{
 				"asw": "B",
@@ -914,7 +933,7 @@ var data = [
 		]
 	},
 	{
-		"paperTitle": "模拟卷（十）",
+		"paperTitle": "模拟卷 (十)",
 		"pbls": [
 			{
 				"asw": "C",
@@ -1014,7 +1033,7 @@ var data = [
 		]
 	},
 	{
-		"paperTitle": "模拟卷（十一）",
+		"paperTitle": "模拟卷 (十一)",
 		"pbls": [
 			{
 				"asw": "B",
@@ -1114,7 +1133,7 @@ var data = [
 		]
 	},
 	{
-		"paperTitle": "模拟卷（十二）",
+		"paperTitle": "模拟卷 (十二)",
 		"pbls": [
 			{
 				"asw": "B",
@@ -1214,7 +1233,8 @@ var data = [
 		]
 	},
 	{
-		"paperTitle": "2023年1月广东省普通高中学业水平合格性考试",
+		// "paperTitle": "2023年1月广东省普通高中学业水平合格性考试",
+		"paperTitle": "2023春季高考",
 		"pbls": [
 			{
 				"asw": "A",

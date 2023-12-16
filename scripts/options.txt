@@ -23,7 +23,7 @@ Enjoy yourself	过得愉快；玩得开心
 Exactly	一点不错，完全正确
 Excuse me	对不起，打扰一下
 forget it	得了吧；算了吧；没关系；不必在意
-Go ahead	前进；去吧，问吧，干吧，做吧，继续说；开始做；着手干；着手做某事，尽管去做；表示鼓励对方去做刚提到的事
+Go ahead	去吧，问吧，干吧，做吧，继续说；开始做；着手干；着手做某事，尽管去做；表示鼓励对方去做刚提到的事
 Go for it	去争取
 Good job	干得不错
 Good luck	祝好运
@@ -79,7 +79,7 @@ It's nothing	没事
 it's ordinary	普通的
 it's possible	可能的
 it's terrible	可怕的
-It's up to you	这取决于你；由你定；你决定吧；由你负责；你猜透了我的想法
+It's up to you	这取决于你；由你定；你决定吧
 Keep cool	保持冷静，有话好好说
 Keep it up	保持下去
 Make yourself at home	别拘束

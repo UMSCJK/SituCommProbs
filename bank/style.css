@@ -1,0 +1,43 @@
+/* Adapted from Mozilla
+https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/details
+在此给Mozilla的示例代码磕一个*/
+details {
+	border: 1px solid #aaa;
+	border-radius: 4px;
+	padding: 0.5em 0.5em 0;
+	margin-bottom: 4px;
+}
+
+summary {
+	font-weight: bold;
+	margin: -0.5em -0.5em 0;
+	padding: 0.5em;
+}
+
+details[open] {
+	padding: 0.5em;
+}
+
+details[open]>summary {
+	border-bottom: 1px solid #aaa;
+	margin-bottom: 0.5em;
+}
+
+/* 返回按钮 */
+#back {
+	width: 120px;
+	border: none;
+	height: 48px;
+	cursor: pointer;
+	font-size: 16px;
+	color: #FFFFFF;
+	line-height: 44px;
+	font-weight: bold;
+	border-radius: 14px;
+	background-color: #58cc02;
+	border-bottom: 4px solid #68b631;
+	/* 固定位置 */
+	right: 16px;
+	bottom: 16px;
+	position: fixed;
+}

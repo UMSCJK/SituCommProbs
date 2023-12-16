@@ -5,15 +5,15 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>情景交际题库浏览</title>
-	<style>
-
-	</style>
+	<link rel="stylesheet" href="style.css">
+	<script src="../scripts/data.js"></script>
 </head>
 
 <body>
 	<h1>情景交际题库</h1>
+	<button id="back" onclick="window.location.href='../index.html'">返回主页</button>
 	<!-- 示例，本文档中全部题目将由JavaScript写入 -->
-	<div class="quetion demo">
+	<!-- <div id="demo">
 		<p class="stem">
 			–Let's take a coffee break.<br />
 			–________ We've been working for hours.
@@ -24,8 +24,7 @@
 			<li>You got me there.</li>
 			<li>You said it.</li>
 		</ol>
-		<!-- 思路一：手动点击传统标签展开单题解析 -->
-		<details open>
+		<details>
 			<summary>显示解析</summary>
 			<p>答案：D</p>
 			<p>句意：
@@ -41,8 +40,34 @@
 			</p>
 		</details>
 	</div>
-	<!-- 思路二：外部按钮统一控制所有题目答案之显示 -->
-	<!-- 我选思路一（ -->
+	<hr /> -->
+	<script>
+		var listHTML = '';
+		for (pNum = 0; pNum < 13; pNum++) {
+			listHTML += '<details><summary>'
+				+ data[pNum].paperTitle
+				+ '</summary>'
+			for (qNum = 0; qNum < 5; qNum++) {
+				var singlePaper = '<p class="stem">' + (qNum + 1) + '. '
+					+ data[pNum].pbls[qNum].eng[0] + '<br />'
+					+ data[pNum].pbls[qNum].eng[1] + '</p><ol type="A"><li>'
+					+ data[pNum].pbls[qNum].eng[2] + '</li><li>'
+					+ data[pNum].pbls[qNum].eng[3] + '</li><li>'
+					+ data[pNum].pbls[qNum].eng[4] + '</li><li>'
+					+ data[pNum].pbls[qNum].eng[5] + '</li></ol><details><summary>显示解析</summary><p>答案：'
+					+ data[pNum].pbls[qNum].asw + '</p><p>句意：</p>'
+					+ data[pNum].pbls[qNum].chn[0] + '<br />'
+					+ data[pNum].pbls[qNum].chn[1] + '</p><p>选项释义：<ol type="A"><li>'
+					+ data[pNum].pbls[qNum].chn[2] + '</li><li>'
+					+ data[pNum].pbls[qNum].chn[3] + '</li><li>'
+					+ data[pNum].pbls[qNum].chn[4] + '</li><li>'
+					+ data[pNum].pbls[qNum].chn[5] + '</li></ol></details>'
+				listHTML += singlePaper;
+			};
+			listHTML += '</details>';
+		};
+		document.body.innerHTML += listHTML;
+	</script>
 </body>
 
 </html>
