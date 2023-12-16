@@ -11,9 +11,9 @@ table#options,
 table#options th,
 table#options td {
 	font-size: 16px;
-	border: 1px solid #e5e5e5;
-	border-collapse: collapse;
 	text-align: center;
+	border-collapse: collapse;
+	border: 1px solid #e5e5e5;
 }
 
 table#options tr:nth-child(even) {
@@ -28,6 +28,7 @@ table#options td {
 	height: 24px;
 	text-align: left;
 	line-height: 24px;
+	user-select: text;
 }
 
 table#options {

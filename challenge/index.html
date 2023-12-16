@@ -211,8 +211,13 @@
 					</tr>
 				</thead>
 				<tbody id="tbody"></tbody>
-				<button id="reload" onclick="location.reload()">再做一次</button>
 			</table>
+				<div id="buttons">
+					<button id="back" onclick="window.location.href='../index.html'">返回主页</button>
+					<button id="bank" onclick="window.location.href='../bank/index.html'">查看题库</button>
+					<button id="opts" onclick="window.location.href='../options/index.html'">选项解析</button>
+				</div>
+				<button id="reload" onclick="location.reload()">再做一次</button>
 			`;
 			document.body.innerHTML = initialHTML;
 			// 模拟生成答题卡
@@ -246,4 +251,5 @@
 	</script>
 </body>
 <!-- TODO: 左上角返回按钮 -->
+
 </html>

@@ -89,8 +89,7 @@ div#header {
 	line-height: 48px;
 }
 
-#continue,
-#reload {
+button {
 	width: 120px;
 	border: none;
 	height: 48px;
@@ -108,20 +107,17 @@ div#header {
 	position: fixed;
 }
 
-#continue:hover,
-#reload:hover {
+button:hover {
 	background-color: #61e002;
 	border-bottom: 4px solid #72c836;
 }
 
-#continue:active,
-#reload:active {
+button:active {
 	border: none;
 	transform: translateY(1px);
 }
 
-#continue:disabled,
-#reload:disabled {
+button:disabled {
 	border: none;
 	color: #afafaf;
 	background-color: #e5e5e5;
@@ -158,10 +154,6 @@ div#header {
 	}
 }
 
-
-
-
-
 /* 结果展示 */
 body {
 	text-align: center;
@@ -171,9 +163,9 @@ table#result,
 table#result th,
 table#result td {
 	font-size: 16px;
-	border: 1px solid #e5e5e5;
-	border-collapse: collapse;
 	text-align: center;
+	border-collapse: collapse;
+	border: 1px solid #e5e5e5;
 }
 
 table#result tr:nth-child(even) {
@@ -195,22 +187,31 @@ table#result {
 }
 
 table#result th {
-	line-height: 24px;
 	height: 24px;
 	color: #FFFFFF;
+	line-height: 24px;
 	background-color: #58cc02;
 }
 
-/* 页面宽度小于等于600px时 */
-/* @media (max-width: 600px) {
-	table#result {
-		width: 90%;
-	}
-} */
+div#buttons {
+	padding-top: 16px;
+}
 
-/* 页面宽度大于600px时 */
-/* @media (min-width: 601px) {
-	table#result {
-		width: 288px;
-	}
-} */
+button#back {
+	border-radius: 16px 0 0 16px;
+}
+
+button#bank {
+	border-radius: 0 0 0 0;
+}
+
+button#opts {
+	border-radius: 0 16px 16px 0;
+}
+
+button#back,
+button#bank,
+button#opts {
+	width: 96px;
+	position: static;
+}

@@ -1,17 +1,16 @@
 /* Adapted from Mozilla
-https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/details
-在此给Mozilla的示例代码磕一个*/
+https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/details */
 details {
-	border: 1px solid #aaa;
 	border-radius: 4px;
-	padding: 0.5em 0.5em 0;
 	margin-bottom: 4px;
+	padding: 0.5em 0.5em 0;
+	border: 1px solid #aaa;
 }
 
 summary {
+	padding: 0.5em;
 	font-weight: bold;
 	margin: -0.5em -0.5em 0;
-	padding: 0.5em;
 }
 
 details[open] {
@@ -19,8 +18,8 @@ details[open] {
 }
 
 details[open]>summary {
-	border-bottom: 1px solid #aaa;
 	margin-bottom: 0.5em;
+	border-bottom: 1px solid #aaa;
 }
 
 /* 返回按钮 */
