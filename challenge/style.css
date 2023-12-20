@@ -145,15 +145,26 @@ button:disabled {
 	border-bottom: 4px solid #84d8ff;
 }
 
-/* 页面宽度小于等于600px时 */
-@media (max-width: 600px) {
+/* 页面宽度小于400px时（一般用不到） */
+@media (max-width: 399px) {
+	#options div {
+		width: auto;
+	}
+
+	#question {
+		font-size: 20px;
+	}
+}
+
+/* 页面宽度小于600px时 */
+@media (max-width: 599px) {
 	#prog-container {
 		width: 90%;
 	}
 }
 
-/* 页面宽度大于600px时 */
-@media (min-width: 601px) {
+/* 页面宽度大于等于600px时 */
+@media (min-width: 600px) {
 	#prog-container {
 		width: 512px;
 	}
@@ -223,5 +234,6 @@ button#back,
 button#bank,
 button#opts {
 	width: 96px;
+	margin: 2px;
 	position: static;
 }

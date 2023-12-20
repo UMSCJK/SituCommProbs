@@ -1,5 +1,4 @@
-const totalQueNum = 10;
-userSelect = '', queList = [], currentQueNum = 0, wrongQues = [], userAns = [], correctAns = [], result = [], ansCard = [], correctQueNum = 0, queSource = [];
+totalQueNum = 10, userSelect = '', queList = [], currentQueNum = 0, wrongQues = [], userAns = [], correctAns = [], result = [], ansCard = [], correctQueNum = 0, queSource = [];
 document.title = totalQueNum + ' Questions Challenge';
 document.getElementById("optnA").addEventListener("click", function () { sel(0) });
 document.getElementById("optnB").addEventListener("click", function () { sel(1) });
@@ -15,7 +14,6 @@ for (var i = 0; i < totalQueNum; i++) {
 	queList.push(tempQue);
 	userAns.push('');// 顺便初始化userAns
 };
-
 function sel(opt) {
 	function clsAdd(idO, idP, idQ, idR) {
 		document.getElementById(idO).classList.remove("seled");
@@ -57,7 +55,6 @@ function sel(opt) {
 	// console.log(userSelect);
 };
 function setQue() {
-	console.log('setQue()被执行，currentQueNum:' + currentQueNum)
 	document.getElementById("question").innerHTML = '<span class="emsp">&emsp;</span>' + data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[0] + '<br /><span class="emsp">&emsp;</span>' + data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[1];
 	document.getElementById("textA").innerHTML = data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[2];
 	document.getElementById("textB").innerHTML = data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[3];
@@ -68,19 +65,14 @@ function setQue() {
 	document.getElementById("prog-bar").innerHTML = (currentQueNum * 10 / totalQueNum * 10).toFixed() + '%';
 	if (userAns[currentQueNum] == 'A') {
 		sel(0);
-		console.log('sel(0)');
 	} else if (userAns[currentQueNum] == 'B') {
 		sel(1);
-		console.log('sel(1)');
 	} else if (userAns[currentQueNum] == 'C') {
 		sel(2);
-		console.log('sel(2)');
 	} else if (userAns[currentQueNum] == 'D') {
 		sel(3);
-		console.log('sel(3)');
 	} else if (userAns[currentQueNum] == 'E') {
 		sel(4);
-		console.log('sel(4)');
 	};
 	if (currentQueNum == 0) {
 		document.getElementById("prog-bar").innerHTML = '';
@@ -90,8 +82,7 @@ function setQue() {
 	};
 	// console.log(userAns);
 };
-function forward() {
-	currentQueNum += 1;
+function clsRst() {
 	document.getElementById("optnA").classList.remove("seled");
 	document.getElementById("optnB").classList.remove("seled");
 	document.getElementById("optnC").classList.remove("seled");
@@ -102,6 +93,10 @@ function forward() {
 	document.getElementById("optnC").classList.add("unseled");
 	document.getElementById("optnD").classList.add("unseled");
 	document.getElementById("optnE").classList.add("unseled");
+};
+function forward() {
+	currentQueNum++;
+	clsRst();
 	userAns[currentQueNum - 1] = userSelect;
 	userSelect = '';
 	if (currentQueNum == totalQueNum) {
@@ -111,22 +106,13 @@ function forward() {
 	}
 };
 function backward() {
-	currentQueNum -= 1;
-	document.getElementById("optnA").classList.remove("seled");
-	document.getElementById("optnB").classList.remove("seled");
-	document.getElementById("optnC").classList.remove("seled");
-	document.getElementById("optnD").classList.remove("seled");
-	document.getElementById("optnE").classList.remove("seled");
-	document.getElementById("optnA").classList.add("unseled");
-	document.getElementById("optnB").classList.add("unseled");
-	document.getElementById("optnC").classList.add("unseled");
-	document.getElementById("optnD").classList.add("unseled");
-	document.getElementById("optnE").classList.add("unseled");
+	currentQueNum--;
+	clsRst();
 	setQue();
 };
 function debug() {
 	for (var i = 0; i < totalQueNum; i++) {
-		var rdm = Math.floor(Math.random() * 4)
+		var rdm = Math.floor(Math.random() * 4);
 		if (rdm == 0) {
 			userAns[i] = 'A';
 		} else if (rdm == 1) {
@@ -162,29 +148,7 @@ function info() {
 	};
 	ansCard.push(result, queSource, correctQueNum);
 	console.log(ansCard);
-	var initialHTML = `
-	<h1 id="resultTitle">结果统计</h1>
-	<h2 id="percentage">正确率：</h2>
-	<table id="result">
-		<thead>
-			<tr>
-				<th style="width: 40px;">题号</th>
-				<th style="width: 40px;">答案</th>
-				<th style="width: 40px;">作答</th>
-				<th style="width: 112px;">来源试卷</th>
-				<th style="width: 56px;">原题号</th>
-			</tr>
-		</thead>
-		<tbody id="tbody"></tbody>
-	</table>
-		<div id="buttons">
-			<button id="back" onclick="window.location.href='../index.html'">返回主页</button>
-			<button id="bank" onclick="window.location.href='../bank/index.html'">查看题库</button>
-			<button id="opts" onclick="window.location.href='../options/index.html'">选项解析</button>
-		</div>
-		<button id="reload" onclick="location.reload()">再做一次</button>
-	`;
-	document.body.innerHTML = initialHTML;
+	document.body.innerHTML = `<h1 id="resultTitle">结果统计</h1><h2 id="percentage">正确率：</h2><table id="result"><thead><tr><th style="width: 40px;">题号</th><th style="width: 40px;">答案</th><th style="width: 40px;">作答</th><th style="width: 112px;">来源试卷</th><th style="width: 56px;">原题号</th></tr></thead><tbody id="tbody"></tbody></table><div id="buttons"><button id="back" onclick="window.location.href='../index.html'">返回主页</button><button id="bank" onclick="window.location.href='../bank/index.html'">查看题库</button><button id="opts" onclick="window.location.href='../options/index.html'">选项解析</button></div><button id="reload" onclick="location.reload()">再做一次</button>`;
 	document.getElementById("percentage").innerHTML += (ansCard[4] * 10 / totalQueNum * 10).toFixed(1) + '%'; // 百分数形式
 	// document.getElementById("percentage").innerHTML += ansCard[4] + '/' + totalQueNum; // 分数形式
 	var writeTable = '';
@@ -193,4 +157,5 @@ function info() {
 	};
 	document.getElementById("tbody").innerHTML = writeTable;
 };
+clsRst();
 setQue();
