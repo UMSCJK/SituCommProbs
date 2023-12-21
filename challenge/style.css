@@ -234,6 +234,5 @@ button#back,
 button#bank,
 button#opts {
 	width: 96px;
-	margin: 2px;
 	position: static;
 }
