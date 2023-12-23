@@ -6,13 +6,32 @@ document.getElementById("optnB").addEventListener("click", function () { sel(1) 
 document.getElementById("optnC").addEventListener("click", function () { sel(2) });
 document.getElementById("optnD").addEventListener("click", function () { sel(3) });
 document.getElementById("optnE").addEventListener("click", function () { sel(4) });
-for (var i = 0; i < totalQueNum; i++) {
-	queList.push([]);
-	queList[i][0] = Math.floor(Math.random() * 13);
-	queList[i][1] = Math.floor(Math.random() * 5);
-	queList[i][2] = data[queList[i][0]].pbls[queList[i][1]].asw;
-	userAns.push('');
+
+totalQueNum = 20, queList = [];
+
+function ifsame(m, n) {
+	if (queList[m][0] == queList[n][0]) {
+		return true;
+	} else {
+		return false;
+	};
 };
+for (var i = 0; i < totalQueNum; i++) {
+	userAns.push('');
+	queList.push([]);
+	genQue(i);
+};
+function genQue(num) {
+	for (var i = 0; ; i++) {
+		queList[num][0] = Math.floor(Math.random() * 13);
+		queList[num][1] = Math.floor(Math.random() * 5);
+		queList[num][2] = data[queList[num][0]].pbls[queList[num][1]].asw;
+		if (ifsame(num, i) == false) { break; }
+	}
+};
+
+console.log(queList);
+
 function sel(opt) {
 	function clsAdd(idO, idP, idQ, idR) {
 		document.getElementById(idO).classList.remove("seled");
@@ -54,7 +73,10 @@ function sel(opt) {
 	// console.log(userSelect);
 };
 function setQue() {
-	document.getElementById("question").innerHTML = '<span class="emsp">&emsp;</span>' + data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[0] + '<br /><span class="emsp">&emsp;</span>' + data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[1];
+	document.getElementById("question").innerHTML = '<span class="emsp">&emsp;</span>'
+		+ data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[0]
+		+ '<br /><span class="emsp">&emsp;</span>'
+		+ data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[1];
 	document.getElementById("textA").innerHTML = data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[2];
 	document.getElementById("textB").innerHTML = data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[3];
 	document.getElementById("textC").innerHTML = data[queList[currentQueNum][0]].pbls[queList[currentQueNum][1]].eng[4];
