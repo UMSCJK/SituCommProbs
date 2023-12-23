@@ -1,4 +1,5 @@
-totalQueNum = 10, userSelect = '', queList = [], currentQueNum = 0, wrongQues = [], userAns = [], correctAns = [], result = [], ansCard = [], correctQueNum = 0, queSource = [];
+totalQueNum = 20, userSelect = '', correctQueNum = 0, currentQueNum = 0;
+queList = [], userAns = [], correctAns = [], result = [], ansCard = [], queSource = [];
 document.title = totalQueNum + ' Questions Challenge';
 document.getElementById("optnA").addEventListener("click", function () { sel(0) });
 document.getElementById("optnB").addEventListener("click", function () { sel(1) });
@@ -6,12 +7,10 @@ document.getElementById("optnC").addEventListener("click", function () { sel(2) 
 document.getElementById("optnD").addEventListener("click", function () { sel(3) });
 document.getElementById("optnE").addEventListener("click", function () { sel(4) });
 for (var i = 0; i < totalQueNum; i++) {
-	var tempQue = [];
-	var paperNum = Math.floor(Math.random() * 13);
-	var queNum = Math.floor(Math.random() * 5);
-	var queAns = data[paperNum].pbls[queNum].asw;
-	tempQue.push(paperNum, queNum, queAns);
-	queList.push(tempQue);
+	queList.push([]);
+	queList[i][0] = Math.floor(Math.random() * 13);
+	queList[i][1] = Math.floor(Math.random() * 5);
+	queList[i][2] = data[queList[i][0]].pbls[queList[i][1]].asw;
 	userAns.push('');
 };
 function sel(opt) {
