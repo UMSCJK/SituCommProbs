@@ -7,7 +7,26 @@ document.getElementById("optnC").addEventListener("click", function () { sel(2) 
 document.getElementById("optnD").addEventListener("click", function () { sel(3) });
 document.getElementById("optnE").addEventListener("click", function () { sel(4) });
 
-totalQueNum = 20, queList = [];
+// developing - annotation needed
+
+for (var i = 0; i < totalQueNum; i++) { // 随机生成题组
+	// 定义临时数组
+	var tempQue = [];
+	// 随机卷号题号
+	var paperNum = Math.floor(Math.random() * 13);
+	var queNum = Math.floor(Math.random() * 5);
+	var queAns = data[paperNum].pbls[queNum].asw;
+	// 卷号题号答案推到临时数组
+	tempQue.push(paperNum, queNum, queAns);
+	// 临时数组推到全局题组
+	queList.push(tempQue);
+	// 顺便初始化userAns = ['' * 10]
+	userAns.push('');
+};
+
+/* developing - avoid generating duplicate questions
+
+totalQueNum = 20, queList = [], userAns = [];
 
 function ifsame(m, n) {
 	if (queList[m][0] == queList[n][0]) {
@@ -16,11 +35,13 @@ function ifsame(m, n) {
 		return false;
 	};
 };
+
 for (var i = 0; i < totalQueNum; i++) {
 	userAns.push('');
 	queList.push([]);
 	genQue(i);
 };
+
 function genQue(num) {
 	for (var i = 0; ; i++) {
 		queList[num][0] = Math.floor(Math.random() * 13);
@@ -29,6 +50,7 @@ function genQue(num) {
 		if (ifsame(num, i) == false) { break; }
 	}
 };
+*/
 
 console.log(queList);
 
