@@ -1,4 +1,4 @@
-totalQueNum = 20, userSelect = '', correctQueNum = 0, currentQueNum = 0;
+totalQueNum = 10, userSelect = '', correctQueNum = 0, currentQueNum = 0;
 queList = [], userAns = [], correctAns = [], result = [], ansCard = [], queSource = [];
 document.title = totalQueNum + ' Questions Challenge';
 document.getElementById("optnA").addEventListener("click", function () { sel(0) });
@@ -6,54 +6,26 @@ document.getElementById("optnB").addEventListener("click", function () { sel(1) 
 document.getElementById("optnC").addEventListener("click", function () { sel(2) });
 document.getElementById("optnD").addEventListener("click", function () { sel(3) });
 document.getElementById("optnE").addEventListener("click", function () { sel(4) });
-
-// developing - annotation needed
-
-for (var i = 0; i < totalQueNum; i++) { // 随机生成题组
-	// 定义临时数组
-	var tempQue = [];
-	// 随机卷号题号
-	var paperNum = Math.floor(Math.random() * 13);
-	var queNum = Math.floor(Math.random() * 5);
-	var queAns = data[paperNum].pbls[queNum].asw;
-	// 卷号题号答案推到临时数组
-	tempQue.push(paperNum, queNum, queAns);
-	// 临时数组推到全局题组
-	queList.push(tempQue);
-	// 顺便初始化userAns = ['' * 10]
-	userAns.push('');
-};
-
-/* developing - avoid generating duplicate questions
-
-totalQueNum = 20, queList = [], userAns = [];
-
 function ifsame(m, n) {
-	if (queList[m][0] == queList[n][0]) {
+	if (queList[m][0] == queList[n][0] && queList[m][1] == queList[n][1]) {
 		return true;
 	} else {
 		return false;
 	};
 };
-
-for (var i = 0; i < totalQueNum; i++) {
-	userAns.push('');
-	queList.push([]);
-	genQue(i);
-};
-
 function genQue(num) {
-	for (var i = 0; ; i++) {
-		queList[num][0] = Math.floor(Math.random() * 13);
-		queList[num][1] = Math.floor(Math.random() * 5);
-		queList[num][2] = data[queList[num][0]].pbls[queList[num][1]].asw;
-		if (ifsame(num, i) == false) { break; }
+	genQueMain(num);
+	for (var j = 0; j < i; j++) {
+		if (ifsame(num, j) == true) {
+			genQueMain(num);
+		}
 	}
 };
-*/
-
-console.log(queList);
-
+function genQueMain(num) {
+	queList[num][0] = Math.floor(Math.random() * 13);
+	queList[num][1] = Math.floor(Math.random() * 5);
+	queList[num][2] = data[queList[num][0]].pbls[queList[num][1]].asw;
+};
 function sel(opt) {
 	function clsAdd(idO, idP, idQ, idR) {
 		document.getElementById(idO).classList.remove("seled");
@@ -92,7 +64,6 @@ function sel(opt) {
 		userSelect = 'E';
 	};
 	document.getElementById("continue").disabled = false;
-	// console.log(userSelect);
 };
 function setQue() {
 	document.getElementById("question").innerHTML = '<span class="emsp">&emsp;</span>'
@@ -227,5 +198,11 @@ function info() {
 	};
 	document.getElementById("tbody").innerHTML = writeTable;
 };
+for (var i = 0; i < totalQueNum; i++) {
+	userAns.push('');
+	queList.push([]);
+	genQue(i);
+};
+console.log(queList);
 clsRst();
 setQue();
